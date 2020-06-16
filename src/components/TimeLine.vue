@@ -290,7 +290,7 @@ export default {
     return {
       hover: false,
       filter: false,
-      filtered: "timeLine__filter"
+      filtered: "timeLine__filter",
     };
   },
   methods: {
@@ -302,8 +302,8 @@ export default {
     leaveTimeline() {
       this.hover = false;
       this.filter = false;
-    }
-  }
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>

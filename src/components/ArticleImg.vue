@@ -5,7 +5,11 @@
       <p class="articleImg__description">{{ description }}</p>
     </div>
     <div class="articleImg__img">
-      <img src="../assets/icon/icon-clic.svg" alt="icon cliquez ici" />
+      <img
+        class="articleImg__icon"
+        src="../assets/icon/icon-clic.svg"
+        alt="icon cliquez ici"
+      />
     </div>
     <div class="articleImg__filter"></div>
   </div>
@@ -86,6 +90,10 @@ export default {
     height: 100vh;
     z-index: -1;
     top: 0;
+  }
+
+  &__icon {
+    margin-top: 700px;
   }
 }
 </style>
