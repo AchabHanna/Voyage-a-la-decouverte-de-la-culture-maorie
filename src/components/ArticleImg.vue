@@ -4,7 +4,9 @@
       <h1 class="articleImg__title">{{ title }}</h1>
       <p class="articleImg__description">{{ description }}</p>
     </div>
-    <div class="articleImg__img"></div>
+    <div class="articleImg__img">
+      <img src="../assets/icon/icon-clic.svg" alt="icon cliquez ici" />
+    </div>
     <div class="articleImg__filter"></div>
   </div>
 </template>
@@ -14,8 +16,8 @@ export default {
   props: {
     img: String,
     title: String,
-    description: String
-  }
+    description: String,
+  },
 };
 </script>
 
