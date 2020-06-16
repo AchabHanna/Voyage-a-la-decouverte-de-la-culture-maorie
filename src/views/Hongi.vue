@@ -14,10 +14,10 @@
 export default {
   data() {
     return {
-      // img: require("../assets/img/backgroundHongi.svg"),
+      img: require("../assets/img/backgroundHongi.svg"),
       title: "Hongi",
       description:
-        "Le hongi est le salut traditionnel maori, l’origine de ce geste remonterait à la création de l'humanité. À la création de la première femme, Hine ahu one ' femme faite de terre ', par le dieu créateur Tane, celui-ci l'aurait fabriquée avec de la glaise avant de lui insuffler la vie par les narines. D'où cet échange de souffle appelé ' ha ', ou le souffle de la vie.Aujourd’hui, cette pratique est utilisée par des membres du gouvernement ou de la famille royale lors de rencontres officielles.",
+        "Le hongi est le salut traditionnel maori, l’origine de ce geste remonterait à la création de l'humanité. À la création de la première femme, Hine ahu one ' femme faite de terre ', par le dieu créateur Tane, celui-ci l'aurait fabriquée avec de la glaise avant de lui insuffler la vie par les narines. D'où cet échange de souffle appelé ' ha ', ou le souffle de la vie.Aujourd’hui, cette pratique est utilisée par des membres du gouvernement ou de la famille royale lors de rencontres officielles."
     };
   },
   mounted() {
@@ -43,8 +43,8 @@ export default {
       if (this.scrollTop < 1) {
         window.location.href = "http://localhost:8080/Karanga";
       }
-    },
-  },
+    }
+  }
 };
 </script>
 

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiClient = axios.create({
-  baseURL: `https://backoffice.zelazna.fr`,
+  baseURL: `http://localhost:3000`,
   withCredentials: false,
   headers: {
     Accept: "application/json",
@@ -11,9 +11,9 @@ const apiClient = axios.create({
 
 export default {
   getArticles() {
-    return apiClient.get("/api/articles");
+    return apiClient.get("/articles");
+  },
+  getArticle(id) {
+    return apiClient.get("/article/" + id);
   }
-  // getArticle(id) {
-  //   return apiClient.get("/api/article/" + id);
-  // }
 };

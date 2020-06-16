@@ -11,7 +11,7 @@
       </p>
       <div class="intro__container">
         <img
-          src="@/assets/icon/moreInformationsIcon.svg"
+          src="@/assets/icon/moreInfoIcon.svg"
           alt="symbôle maori"
           class="intro__moreInformationsIcon"
         />
