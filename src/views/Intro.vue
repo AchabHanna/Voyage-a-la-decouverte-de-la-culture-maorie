@@ -34,7 +34,7 @@ export default {
       video: require("@/assets/video/video-intro.mp4"),
       name: this.$route.params.name,
       title: "Haero mai",
-      subtitle: "bienvenue",
+      subtitle: "Bienvenue",
     };
   },
 };
