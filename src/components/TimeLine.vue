@@ -280,7 +280,7 @@
       </div>
     </div>
 
-    <div :class="[filter ? filtered : '']"></div>
+    <div :class="[filter ? filtered : displayed]"></div>
   </div>
 </template>
 
@@ -291,6 +291,7 @@ export default {
       hover: false,
       filter: false,
       filtered: "timeLine__filter",
+      displayed: "display"
     };
   },
   methods: {
@@ -381,8 +382,10 @@ export default {
   }
 
   &__containerImg {
+    opacity: 1;
     position: absolute;
     bottom: 19px;
+    transition: opacity 6s;
 
     width: 100vw;
     @include flexbox(row, space-around, baseline);
@@ -454,6 +457,10 @@ export default {
     border-radius: 50%;
     border: none;
     cursor: pointer;
+    transition: 0.6s;
+    &:hover {
+      transform: scale(1.3);
+    }
 
     &--wero {
       background-color: #9f1f21;
@@ -491,9 +498,15 @@ export default {
     width: 100vw;
     height: 100vh;
     z-index: -1;
+    opacity: 1;
+    transition: opacity 0.6s;
   }
-  .nextStep {
-    transform: translateX(20vw);
+  .display {
+    background-color: $filterColorTimeline;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    transition: opacity 0.6s;
   }
 }
 </style>

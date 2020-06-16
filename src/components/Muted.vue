@@ -82,7 +82,10 @@ export default {
     cursor: pointer;
     background-color: transparent;
     border: none;
-    border-radius: 50%;
+    transition: 0.6s;
+    &:hover {
+      transform: scale(1.1);
+    }
 
     &--unmute {
       display: none;
