@@ -35,18 +35,21 @@
       />
     </button>
     <TimeLine @timeline-hovered="iconDisplay" @timeline-leave="iconUndisplay" />
-    <LargeInformations
-      v-show="isShown"
-      :title="moreInformationsTitle"
-      :description="moreInformationsDescription"
-      :img="moreInformationsImg"
-      :titleLargeInformations="titleLargeInformations"
-      :descriptionFirst="descriptionFirstMoreInformations"
-      :descriptionSecond="descriptionSecondMoreInformations"
-      :descriptionThird="descriptionThirdMoreInformations"
-      :descriptionFourth="descriptionFourthMoreInformations"
-      :SecondTitle="secondTitle"
-    />
+    <transition name="slide-left">
+      <LargeInformations
+        @hide-modal="isShown = false"
+        v-show="isShown"
+        :title="moreInformationsTitle"
+        :description="moreInformationsDescription"
+        :img="moreInformationsImg"
+        :titleLargeInformations="titleLargeInformations"
+        :descriptionFirst="descriptionFirstMoreInformations"
+        :descriptionSecond="descriptionSecondMoreInformations"
+        :descriptionThird="descriptionThirdMoreInformations"
+        :descriptionFourth="descriptionFourthMoreInformations"
+        :SecondTitle="secondTitle"
+      />
+    </transition>
   </div>
 </template>
 <script>
@@ -146,5 +149,35 @@ export default {
   &:hover {
     transform: scale(1.2);
   }
+}
+
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  transition: opacity 4s ease-out;
+}
+.fade-leave-active {
+  transition: opacity 0.5s ease-out;
+}
+.fade-leave-to {
+  opacity: 0;
+}
+
+.slide-left-enter {
+  transform: translateX(150px);
+  opacity: 0;
+}
+.slide-left-enter-active {
+  transition: all 0.5s ease-out;
+}
+
+.slide-left-leave-active {
+  transition: all 0.5s ease-out;
+}
+
+.slide-left-leave-to {
+  transform: translateX(150px);
+  opacity: 0;
 }
 </style>
