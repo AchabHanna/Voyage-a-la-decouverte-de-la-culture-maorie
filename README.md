@@ -1,49 +1,15 @@
-# web1-endgame
-culture-maorie.netlify.app
+Webdoc: Voyage à travers la culture Maori
 
-## Stack du projet
+Team:
+Eunji Lee
+Cristiana Monteiro
+Ramtin Attar
+Hanna Achab
+Oum Mauduit
 
-- Babel (es6 syntax)
-- Vue.js
-  - Vue Router
-- Sass
+Command:
+npm install / yarn install
+npm run serve / yarn serve
+npm run build / yarn build
 
-## Route
-
-| url      | nom      |
-| ---      | ---      |
-| /        | Homepage |
-| /team    | Team     |
-
-## Command line pour démarrer le projet
-
-### Project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-## Documentation
-
-https://vuejs.org/
-
-https://router.vuejs.org/
-
-https://www.vuemastery.com/pdf/Vue-Essentials-Cheat-Sheet.pdf
-
-https://marozed.ma/vue-cheatsheet/
-
+npm install axios
