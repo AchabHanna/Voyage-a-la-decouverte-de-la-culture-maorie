@@ -54,7 +54,7 @@ import contentServices from "@/services/contentService.js";
 export default {
   data() {
     return {
-      isShown: true,
+      isShown: false,
       titleLargeInformations: "tatouage",
       moreInformationsTitle: "jupe puipui",
       moreInformationsDescription:
