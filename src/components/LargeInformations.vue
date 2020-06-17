@@ -1,5 +1,8 @@
 <template>
   <div class="informations">
+    <button class="icon btn" @click="hideModal">
+      <img src="@/assets/icon/cross.svg" alt="" class="" />
+    </button>
     <div class="moreInformations">
       <div class="moreInformations__wrapper">
         <div class="moreInformations__containerImg">
@@ -69,6 +72,11 @@ export default {
     descriptionThird: String,
     descriptionFourth: String
     // imgLargeInformations: String
+  },
+  methods: {
+    hideModal() {
+      this.$emit("hide-modal");
+    }
   }
 };
 </script>
@@ -82,6 +90,11 @@ export default {
   z-index: 1;
   overflow: auto;
   max-width: 100vw;
+}
+.icon {
+  position: absolute;
+  top: 2px;
+  right: 2px;
 }
 .moreInformations {
   height: 90vh;
