@@ -373,7 +373,7 @@ export default {
 
   &__wrapper {
     position: absolute;
-    z-index: 2;
+    z-index: 1;
     bottom: -10px;
     @include medium {
       bottom: -14px;
