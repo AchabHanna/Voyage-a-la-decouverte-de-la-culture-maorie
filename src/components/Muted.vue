@@ -74,7 +74,7 @@ export default {
 
 .mutedContainer {
   position: absolute;
-  z-index: 2;
+  z-index: 1;
   right: 10px;
   top: 10px;
 
