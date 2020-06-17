@@ -298,13 +298,15 @@ export default {
     hoverTimeline() {
       this.hover = true;
       this.filter = true;
+      this.$emit("timeline-hovered");
     },
 
     leaveTimeline() {
       this.hover = false;
       this.filter = false;
-    },
-  },
+      this.$emit("timeline-leave");
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>
@@ -500,6 +502,8 @@ export default {
     z-index: -1;
     opacity: 1;
     transition: opacity 0.6s;
+    position: absolute;
+    top: 0;
   }
   .display {
     background-color: $filterColorTimeline;
@@ -507,6 +511,9 @@ export default {
     height: 100vh;
     opacity: 0;
     transition: opacity 0.6s;
+    position: absolute;
+    top: 0;
+    pointer-events: none;
   }
 }
 </style>

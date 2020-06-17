@@ -5,11 +5,13 @@
       <p class="articleImg__description">{{ description }}</p>
     </div>
     <div class="articleImg__img">
-      <img
-        class="articleImg__icon"
-        src="../assets/icon/icon-clic.svg"
-        alt="icon cliquez ici"
-      />
+      <!-- <button>
+        <img
+          class="articleImg__button btn"
+          src="../assets/icon/icon-clic.svg"
+          alt="icon changer de page"
+        />
+      </button> -->
     </div>
     <div class="articleImg__filter"></div>
   </div>
@@ -20,8 +22,8 @@ export default {
   props: {
     img: String,
     title: String,
-    description: String,
-  },
+    description: String
+  }
 };
 </script>
 
@@ -32,7 +34,7 @@ export default {
   &__container {
     @include flexbox(column, center, center);
     width: 100vw;
-    height: 101vh;
+    height: 100vh;
     position: absolute;
     z-index: 1;
   }
@@ -92,8 +94,11 @@ export default {
     top: 0;
   }
 
-  &__icon {
-    margin-top: 700px;
-  }
+  // &__button {
+  //   position: absolute;
+  //   //z-index: ;
+  //   bottom: 70px;
+  //   transform: translateX(-50%);
+  // }
 }
 </style>

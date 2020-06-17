@@ -1,5 +1,5 @@
 <template>
-  <div class="moreInformation">
+  <div class="">
     <Muted />
     <ArticleVideo :video="video" />
     <ArticleImg
@@ -27,8 +27,15 @@
         class="moreInformationIcon__iconPuipui"
       />
     </button>
+    <button v-if="iconVisible">
+      <img
+        class="moreInformation__button btn"
+        src="../assets/icon/icon-clic.svg"
+        alt="icon changer de page"
+      />
+    </button>
 
-    <TimeLine />
+    <TimeLine @timeline-hovered="iconDisplay" @timeline-leave="iconUndisplay" />
   </div>
 </template>
 <script>
@@ -37,6 +44,7 @@ export default {
   data() {
     return {
       active: false,
+      iconVisible: true,
       activeClass: "is-visible",
       video: require("@/assets/video/video-wero.mp4"),
       article: {}
@@ -60,24 +68,31 @@ export default {
     },
     showButton() {
       this.active = !this.active;
+    },
+    iconDisplay() {
+      this.iconVisible = false;
+    },
+    iconUndisplay() {
+      this.iconVisible = true;
     }
   }
 };
 </script>
 
 <style lang="scss" scoped>
+@import "@/assets/css/styles.scss";
 .moreInformationIcon__button {
   opacity: 1;
   display: none;
   transition: opacity 1s;
   &--taiaha {
     top: 42vh;
-    right: 28vw;
+    right: 26vw;
   }
 
   &--puipui {
-    top: 60vh;
-    right: 28vw;
+    top: 64vh;
+    right: 16vw;
   }
 }
 .is-visible {
@@ -92,5 +107,14 @@ export default {
   &:hover {
     transform: scale(1.3);
   }
+}
+.moreInformation__button {
+  position: absolute;
+  z-index: 1;
+  bottom: 70px;
+  //transform: translateX(-50%);
+  // &:hover {
+  //   transform: scale(0.2);
+  // }
 }
 </style>
