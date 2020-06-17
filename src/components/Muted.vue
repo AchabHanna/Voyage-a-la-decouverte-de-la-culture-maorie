@@ -1,7 +1,7 @@
 <template>
   <div class="mutedContainer">
     <button
-      class="mutedContainer__muteButton mutedContainer__muteButton--mute"
+      class="mutedContainer__muteButton mutedContainer__muteButton--mute btn"
       id="unmuteIcon"
       v-on:click="mute"
       :class="[isVisible ? visible : display]"
@@ -26,7 +26,7 @@
       </svg>
     </button>
     <button
-      class="mutedContainer__muteButton mutedContainer__muteButton--unmute"
+      class="mutedContainer__muteButton mutedContainer__muteButton--unmute btn"
       id="muteIcon"
       v-on:click="unmute"
       :class="[isVisible ? display : visible]"
@@ -79,13 +79,7 @@ export default {
   top: 10px;
 
   &__muteButton {
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
     transition: 0.6s;
-    &:hover {
-      transform: scale(1.1);
-    }
 
     &--unmute {
       display: none;
