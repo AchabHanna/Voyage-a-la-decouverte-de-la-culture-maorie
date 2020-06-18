@@ -71,7 +71,7 @@ export default {
   data() {
     return {
       largeInformationIsShown: false,
-      moreInformationsIsShown: true,
+      moreInformationsIsShown: false,
       active: false,
       iconVisible: true,
       activeClass: "is-visible",

@@ -4,15 +4,7 @@
       <h1 class="articleImg__title">{{ title }}</h1>
       <p class="articleImg__description">{{ description }}</p>
     </div>
-    <div class="articleImg__img">
-      <!-- <button>
-        <img
-          class="articleImg__button btn"
-          src="../assets/icon/icon-clic.svg"
-          alt="icon changer de page"
-        />
-      </button> -->
-    </div>
+    <div class="articleImg__img"></div>
     <div class="articleImg__filter"></div>
   </div>
 </template>
@@ -22,8 +14,8 @@ export default {
   props: {
     img: String,
     title: String,
-    description: String,
-  },
+    description: String
+  }
 };
 </script>
 
@@ -85,20 +77,13 @@ export default {
     }
   }
 
-  &__filter {
-    position: absolute;
-    background-color: $filterColor;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-    top: 0;
-  }
-
-  // &__button {
+  // &__filter {
   //   position: absolute;
-  //   //z-index: ;
-  //   bottom: 70px;
-  //   transform: translateX(-50%);
+  //   background-color: $filterColor;
+  //   width: 100vw;
+  //   height: 100vh;
+  //   z-index: -1;
+  //   top: 0;
   // }
 }
 </style>

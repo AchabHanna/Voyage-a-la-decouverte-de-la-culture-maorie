@@ -54,7 +54,7 @@ export default {
       video: require("@/assets/video/video-intro.mp4"),
       name: this.$route.params.name,
       title: "Haero mai",
-      subtitle: "Bienvenue",
+      subtitle: "Bienvenue"
     };
   },
   methods: {
@@ -66,8 +66,8 @@ export default {
       } else {
         document.getElementById("mySubMenu").style.visibility = "hidden";
       }
-    },
-  },
+    }
+  }
 };
 </script>
 

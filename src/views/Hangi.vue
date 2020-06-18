@@ -1,52 +1,94 @@
 <template>
-  <div class="hangi">
-    <Muted />
-    <ArticleImg
-      :title="title"
-      :description="description"
-      :img="img"
-    ></ArticleImg>
+  <div>
+    <ArticleVideo :video="video" />
+    <ArticleImg :title="title" :description="description"></ArticleImg>
     <TimeLine />
+    <Muted />
+    <!-- <button
+      class="moreInformationIcon__button moreInformationIcon__button btn"
+      :class="[active ? activeClass : '']"
+      @click="showWindow"
+    >
+      <img
+        src="../assets/icon/moreInfoIcon.svg"
+        alt=""
+        class="moreInformationIcon__iconTaiaha"
+      />
+    </button> -->
+    <router-link to="/Karanga">
+      <button v-if="iconVisible" class="moreInformation__button btn">
+        <img
+          class="moreInformation__img"
+          src="../assets/icon/icon-clic.svg"
+          alt="icon changer de page"
+        />
+      </button>
+    </router-link>
+    <TimeLine @timeline-hovered="iconDisplay" @timeline-leave="iconUndisplay" />
   </div>
 </template>
 
 <script>
+import contentServices from "@/services/contentService.js";
 export default {
   data() {
     return {
-      // img: require("../assets/img/backgroundHangi.svg"),
+      active: false,
+      iconVisible: true,
+      activeClass: "is-visible",
+      video: require("@/assets/video/video-wero.mp4"),
       title: "HANGI",
       description:
-        " Le hangi traditionnel consiste à envelopper des paniers d’aliments contenant de la viande et des légumes (patate douce, maïs, carotte…) et de les cuire dans un trou creusé dans le sol au fond duquel sont déposées des pierres volcaniques chauffées. On trouve ce plat le plus souvent dans la région de Rotorua au Nord de l’île..",
+        " Le hangi traditionnel consiste à envelopper des paniers d’aliments contenant de la viande et des légumes (patate douce, maïs, carotte…) et de les cuire dans un trou creusé dans le sol au fond duquel sont déposées des pierres volcaniques chauffées. On trouve ce plat le plus souvent dans la région de Rotorua au Nord de l’île.",
+      article: {}
     };
   },
+  async mounted() {
+    contentServices.getArticle(1).then(response => {
+      this.article = response.data;
+      console.log(response.data);
+    });
 
-  mounted() {
-    window.scrollTo(0, 1);
+    await this.isVisible();
   },
-  created() {
-    window.addEventListener("scroll", this.handleScroll);
-  },
-  destroyed() {
-    window.removeEventListener("scroll", this.handleScroll);
-  },
+
   methods: {
-    handleScroll(event) {
-      this.scrollTop = event.target.scrollingElement.scrollTop;
-      if (this.scrollTop < 1) {
-        window.location.href = "http://localhost:8080/Haka";
-      }
+    async isVisible() {
+      let video = document.getElementById("video");
+      console.log(video);
+      video.onended = () => {
+        this.showButton();
+      };
     },
-  },
+    showButton() {
+      this.active = !this.active;
+    },
+    iconDisplay() {
+      this.iconVisible = false;
+    },
+    iconUndisplay() {
+      this.iconVisible = true;
+    }
+    // showWindow() {
+    //   this.moreInformationsIsShown = true;
+    // }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 @import "@/assets/css/styles.scss";
-.hangi {
-  background-image: url("../assets/img/backgroundHangi.svg");
-  @include backgroundImg(no-repeat, cover, top center);
-  width: 100vw;
-  height: 101vh;
+.is-visible {
+  display: block;
+  opacity: 1;
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  transition: 0.2s;
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 </style>

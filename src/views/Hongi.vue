@@ -112,20 +112,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/css/styles.scss";
-// .hongi {
-//   background-image: url("../assets/img/backgroundHongi.svg");
-//   @include backgroundImg(no-repeat, cover, top center);
-//   width: 100vw;
-//   height: 100vh;
-
-//   &__filter {
-//     background-color: $filterColor;
-//     position: absolute;
-//     top: 0;
-//     width: 100vw;
-//     height: 100vh;
-//   }
-
 .moreInformationIcon__button--tatouage {
   top: 42vh;
   right: 26vw;
