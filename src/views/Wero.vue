@@ -50,6 +50,7 @@
         :descriptionSecond="descriptionSecondMoreInformations"
         :descriptionThird="descriptionThirdMoreInformations"
         :descriptionFourth="descriptionFourthMoreInformations"
+        background="tissage"
       />
     </transition>
     <transition name="slide-left">
@@ -59,6 +60,7 @@
         :title="taiahaTitle"
         :description="taiahaDescription"
         :img="taiahaImg"
+        position="absolute"
       />
     </transition>
   </div>
@@ -69,7 +71,7 @@ export default {
   data() {
     return {
       largeInformationIsShown: false,
-      moreInformationsIsShown: false,
+      moreInformationsIsShown: true,
       active: false,
       iconVisible: true,
       activeClass: "is-visible",
@@ -91,7 +93,7 @@ export default {
       taiahaTitle: "taiaha",
       taiahaDescription:
         "Le Taiaha est une arme traditionnelle maorie taillée dans un morceau de bois ou dans un os de baleine. Il est orné sur la partie haute d'un tiki au regard à la fois bienveillant et menacant suivant qu’il etait utilisé au cours de combat ou de ceremonie. La pointe est souvent ornée d'un beau decor d'entrelacs sur chaque face.",
-      taiahaImg: require("@/assets/img/taiaha.svg"),
+      taiahaImg: require("@/assets/img/taiaha--3.jpg"),
       article: {}
     };
   },

@@ -25,19 +25,25 @@
     </router-link>
     <TimeLine @timeline-hovered="iconDisplay" @timeline-leave="iconUndisplay" />
     <transition name="slide-left">
-      <!-- <MoreInformations
+      <MoreInformations
         @hide-window="moreInformationsIsShown = false"
         v-show="moreInformationsIsShown"
         :title="amuletteTitle"
         :description="amuletteDescription"
         :img="amuletteImg"
-      /> -->
+        position="absolute"
+        view="classic"
+      />
+    </transition>
+    <transition name="slide-left">
       <MoreInformations
         @hide-window="moreInformationsIsShown = false"
         v-show="moreInformationsIsShown"
         :title="scultureTitle"
         :description="scultureDescription"
         :img="scultureImg"
+        position="secondView"
+        view="reverse"
       />
     </transition>
   </div>
@@ -59,11 +65,11 @@ export default {
       scultureTitle: "tikki",
       scultureDescription:
         "Les Tikis sont des statues omniprésentes dans la culture maori. Ces représentants des dieux ou de génies sont là pour protéger les habitants Selon les sorciers polynésiens, le Tiki est le créateur de l’homme. Il serait l’héritier du mana, c’est-à-dire une énergie et un rayonnement qui relient l’univers et les êtres.Chaque Tiki a sa propre personnalité, il peut être neutre mais aussi bénéfique pour certains et maléfique pour d’autres. Ils sont présents dans beaucoup de maisons.",
-      scultureImg: require("@/assets/img/scultureTikki.svg")
-      // amuletteTitle: "tikki",
-      // amuletteDescription:
-      //   "Outres les statuettes, vous pouvez également le trouver en pendentif en os, en nacre, en jade ou en corail. Il a une valeur rituelle comme une amulette. Selon la coutume maorie, il doit se transmettre de génération en génération. Représentant un humain, il évoque les ancêtres et peut ainsi symboliser la fertilité et éloignes les énergies négatifs.",
-      // amuletteImg: require("@/assets/img/amuletteTikki.svg")
+      scultureImg: require("@/assets/img/scultureTikki-2.jpg"),
+      amuletteTitle: "tikki",
+      amuletteDescription:
+        "Outres les statuettes, vous pouvez également le trouver en pendentif en os, en nacre, en jade ou en corail. Il a une valeur rituelle comme une amulette. Selon la coutume maorie, il doit se transmettre de génération en génération. Représentant un humain, il évoque les ancêtres et peut ainsi symboliser la fertilité et éloignes les énergies négatifs.",
+      amuletteImg: require("@/assets/img/amuletteTiki-2.jpg")
     };
   },
   async mounted() {
