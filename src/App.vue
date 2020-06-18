@@ -14,4 +14,39 @@ export default {
 @import "@/assets/css/vendors/reset.scss";
 @import "@/assets/css/global/mixin.scss";
 @import "@/assets/css/styles.scss";
+.btn {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  transition: scale 1s;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.slide-left-enter {
+  transform: translateX(150px);
+  opacity: 0;
+}
+.slide-left-enter-active,
+.slide-left-leave-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-left-leave-to {
+  transform: translateX(150px);
+  opacity: 0;
+}
+
+.opacity-enter {
+  opacity: 0;
+}
+.opacity-enter-active,
+.opacity-leave-active {
+  transition: opacity 0.6s ease-out;
+}
+
+.opacity-leave-to {
+  opacity: 0;
+}
 </style>

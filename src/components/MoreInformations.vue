@@ -1,18 +1,16 @@
 <template>
-  <div class="">
-    <div class="test">
-      <div class="moreInformations">
-        <div class="moreInformations__wrapper">
-          <div class="moreInformations__containerImg">
-            <img :src="img" alt="" class="moreInformations__img" />
-          </div>
-          <div class="moreInformations__containerText">
-            <h1 class="moreInformations__title">{{ title }}</h1>
-            <p class="moreInformations__description">{{ description }}</p>
-          </div>
+  <div class="moreInformation" @click="hideWindow">
+    <div class="moreInformation__containt">
+      <div class="moreInformation__wrapper">
+        <div class="moreInformation__containerImg">
+          <img :src="img" alt="" class="moreInformation__img" />
         </div>
-        <div class="moreInformations__filter"></div>
+        <div class="moreInformation__containerText">
+          <h1 class="moreInformation__title">{{ title }}</h1>
+          <p class="moreInformation__description">{{ description }}</p>
+        </div>
       </div>
+      <div class="moreInformations__filter"></div>
     </div>
   </div>
 </template>
@@ -28,63 +26,103 @@ export default {
     descriptionFirst: String,
     descriptionSecond: String,
     descriptionThird: String,
-    descriptionFourth: String,
-    SecondTitle: String
+    descriptionFourth: String
+  },
+  methods: {
+    hideWindow() {
+      this.$emit("hide-window");
+    }
   }
 };
 </script>
 
 <style lang="scss" scoped>
 @import "@/assets/css/styles.scss";
-.test {
+.moreInformation {
   position: absolute;
   width: 84vw;
   height: 100vh;
   right: 0;
   z-index: 1;
   overflow: auto;
-}
-.moreInformations {
-  width: 84vw;
-  height: 100vh;
-  background: rgba(2, 2, 2, 0.9);
 
-  &__wrapper {
-    @include flexbox(row, initial, center);
+  &__containt {
     height: 100vh;
-    width: 84vw;
-    padding-left: 10vw;
+    background: rgba(2, 2, 2, 0.9);
+  }
+  &__wrapper {
+    @include flexbox(column, initial, center);
+    padding: 10px;
+    height: 80vh;
+    @include medium {
+      padding: 30px;
+    }
+    @include large {
+      height: 80vh;
+      width: 84vw;
+    }
+
+    @include large {
+      @include flexbox(row, space-around, center);
+      width: 84vw;
+      padding: 0;
+    }
+    @include extraLarge {
+      padding-right: 40px;
+      padding-left: 40px;
+    }
+  }
+  &__img {
+    padding-top: 30px;
+    @include large {
+      padding: 30px;
+    }
   }
   &__containerText {
-    @include flexbox(column, initial, flex-start);
-    height: 42vh;
-    width: 30vw;
-    margin-left: 10vw;
+    margin-top: 30px;
+    @include large {
+      @include flexbox(column, initial, flex-start);
+      padding-top: 20px;
+      height: 42vh;
+      width: 40vw;
+      margin-left: 0;
+      padding: 10;
+      margin-left: 0;
+      margin-top: 0;
+    }
+    @include extraLarge {
+      padding-top: 48px;
+    }
   }
   &__title {
-    font-size: 24px;
+    font-size: 18px;
     text-transform: uppercase;
     color: $white;
     font-family: $Cinzel;
-    margin-bottom: 50px;
+    margin-bottom: 14px;
+    @include medium {
+      margin-bottom: 24px;
+      font-size: 22px;
+    }
+    @include large {
+      margin-bottom: 40px;
+      font-size: 24px;
+    }
   }
 
   &__description {
+    font-size: 16px;
+    line-height: 24px;
     font-family: $Avenir;
-    font-size: 18px;
     color: white;
-    line-height: 27px;
     text-align: left;
-  }
+    margin: 20px;
 
-  &__filter {
-    background-color: #353535;
-    width: 100vw;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -1;
+    @include medium {
+      font-size: 18px;
+      line-height: 27px;
+      margin: 0;
+    }
   }
 }
 </style>

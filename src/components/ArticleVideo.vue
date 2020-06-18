@@ -16,6 +16,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.test {
+  width: 100vw;
+  height: 100vh;
+}
 .articleVideo__video {
   object-fit: cover;
   height: 100vh;
