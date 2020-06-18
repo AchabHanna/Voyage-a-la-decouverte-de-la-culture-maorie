@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  components: {}
+  components: {},
 };
 </script>
 
@@ -14,6 +14,10 @@ export default {
 @import "@/assets/css/vendors/reset.scss";
 @import "@/assets/css/global/mixin.scss";
 @import "@/assets/css/styles.scss";
+p {
+  font-family: $Avenir;
+}
+
 .btn {
   background-color: transparent;
   cursor: pointer;

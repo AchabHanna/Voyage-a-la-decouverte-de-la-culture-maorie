@@ -22,8 +22,8 @@ export default {
   props: {
     img: String,
     title: String,
-    description: String
-  }
+    description: String,
+  },
 };
 </script>
 
@@ -55,7 +55,7 @@ export default {
     }
   }
   &__description {
-    font-family: "Roboto";
+    font-family: $Avenir;
     font-size: 16px;
     color: $white;
     line-height: 24px;
