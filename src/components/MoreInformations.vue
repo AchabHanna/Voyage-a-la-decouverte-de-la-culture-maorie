@@ -20,13 +20,7 @@ export default {
   props: {
     title: String,
     description: String,
-    filter: String,
-    img: String,
-    titleLargeInformations: String,
-    descriptionFirst: String,
-    descriptionSecond: String,
-    descriptionThird: String,
-    descriptionFourth: String
+    img: String
   },
   methods: {
     hideWindow() {
