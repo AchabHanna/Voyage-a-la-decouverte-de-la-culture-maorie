@@ -70,6 +70,9 @@ export default {
     return {
       largeInformationIsShown: false,
       moreInformationsIsShown: false,
+      active: false,
+      iconVisible: true,
+      activeClass: "is-visible",
       titleLargeInformations: "Tissage",
       moreInformationsTitle: "jupe puipui",
       moreInformationsDescription:
@@ -84,19 +87,16 @@ export default {
         "Hineteiwaiwa est la principale déesse de la maison du tissage whare pora, elle représente les arts pratiqués par les femmes.Pour les maoris le tissage est un état d’être.",
       descriptionFourthMoreInformations:
         "Hineteiwaiwa est la principale déesse de la maison du tissage whare pora, elle représente les arts pratiqués par les femmes.Pour les maoris le tissage est un état d’être.",
-      active: false,
-      iconVisible: true,
-      activeClass: "is-visible",
       video: require("@/assets/video/video-wero.mp4"),
       taiahaTitle: "taiaha",
       taiahaDescription:
         "Le Taiaha est une arme traditionnelle maorie taillée dans un morceau de bois ou dans un os de baleine. Il est orné sur la partie haute d'un tiki au regard à la fois bienveillant et menacant suivant qu’il etait utilisé au cours de combat ou de ceremonie. La pointe est souvent ornée d'un beau decor d'entrelacs sur chaque face.",
       taiahaImg: require("@/assets/img/taiaha.svg"),
-      article: {},
+      article: {}
     };
   },
   async mounted() {
-    contentServices.getArticle(1).then((response) => {
+    contentServices.getArticle(1).then(response => {
       this.article = response.data;
       console.log(response.data);
     });
@@ -126,26 +126,21 @@ export default {
     },
     showWindow() {
       this.moreInformationsIsShown = true;
-    },
-  },
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 @import "@/assets/css/styles.scss";
-.moreInformationIcon__button {
-  opacity: 1;
-  display: none;
-  transition: opacity 1s;
-  &--taiaha {
-    top: 42vh;
-    right: 26vw;
-  }
+.moreInformationIcon__button--taiaha {
+  top: 42vh;
+  right: 26vw;
+}
 
-  &--puipui {
-    top: 64vh;
-    right: 16vw;
-  }
+.moreInformationIcon__button--puipui {
+  top: 64vh;
+  right: 16vw;
 }
 .is-visible {
   display: block;
@@ -159,26 +154,5 @@ export default {
   &:hover {
     transform: scale(1.1);
   }
-}
-.moreInformation__button {
-  position: absolute;
-  z-index: 1;
-  bottom: 60px;
-  transition: 0.4s;
-  left: 50vw;
-}
-
-.slide-left-enter {
-  transform: translateX(150px);
-  opacity: 0;
-}
-.slide-left-enter-active,
-.slide-left-leave-active {
-  transition: all 0.3s ease-out;
-}
-
-.slide-left-leave-to {
-  transform: translateX(150px);
-  opacity: 0;
 }
 </style>

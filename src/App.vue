@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  components: {},
+  components: {}
 };
 </script>
 
@@ -22,6 +22,7 @@ p {
   background-color: transparent;
   cursor: pointer;
   border: none;
+  outline: none;
   transition: scale 1s;
   &:hover {
     transform: scale(1.1);
@@ -52,5 +53,32 @@ p {
 
 .opacity-leave-to {
   opacity: 0;
+}
+.is-visible {
+  display: block;
+  opacity: 1;
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  transition: 0.2s;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.moreInformationIcon__button {
+  opacity: 1;
+  display: none;
+  transition: opacity 1s;
+}
+
+.moreInformation__button {
+  position: absolute;
+  z-index: 1;
+  bottom: 60px;
+  transition: 0.4s;
+  left: 50vw;
 }
 </style>

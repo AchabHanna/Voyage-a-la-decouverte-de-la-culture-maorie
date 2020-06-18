@@ -77,12 +77,14 @@ export default {
   z-index: 1;
   right: 10px;
   top: 10px;
+  cursor: pointer;
 
   &__muteButton {
     transition: 0.6s;
 
     &--unmute {
       display: none;
+      transition: 0.6s;
     }
   }
 }
