@@ -54,20 +54,6 @@ p {
 .opacity-leave-to {
   opacity: 0;
 }
-.is-visible {
-  display: block;
-  opacity: 1;
-  position: absolute;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  z-index: 1;
-  transition: 0.2s;
-  &:hover {
-    transform: scale(1.1);
-  }
-}
-
 .moreInformationIcon__button {
   opacity: 1;
   display: none;
