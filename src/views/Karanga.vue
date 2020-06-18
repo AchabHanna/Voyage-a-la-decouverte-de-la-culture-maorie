@@ -25,20 +25,20 @@
     </router-link>
     <TimeLine @timeline-hovered="iconDisplay" @timeline-leave="iconUndisplay" />
     <transition name="slide-left">
-      <MoreInformations
+      <!-- <MoreInformations
         @hide-window="moreInformationsIsShown = false"
         v-show="moreInformationsIsShown"
         :title="amuletteTitle"
         :description="amuletteDescription"
         :img="amuletteImg"
+      /> -->
+      <MoreInformations
+        @hide-window="moreInformationsIsShown = false"
+        v-show="moreInformationsIsShown"
+        :title="scultureTitle"
+        :description="scultureDescription"
+        :img="scultureImg"
       />
-      <!-- <MoreInformations
-      @hide-window="moreInformationsIsShown = false"
-      v-show="moreInformationsIsShown"
-      :title="scultureTitle"
-      :description="scultureDescription"
-      :img="scultureImg"
-    /> -->
     </transition>
   </div>
 </template>
@@ -48,18 +48,18 @@ import contentServices from "@/services/contentService.js";
 export default {
   data() {
     return {
-      moreInformationsIsShown: true,
+      moreInformationsIsShown: false,
       active: false,
       iconVisible: true,
       activeClass: "is-visible",
       title: "karanga",
       description:
         "Le Karanga, qui signifie appeler, invoquer, est une des étapes de la cérémonie du powhiri. C'est un échange d'appels chantés presque exclusivement par les femmes dans la langue maorie, le Reo Maori. Il a lieu lorsqu'un groupe de visiteurs se déplace sur le marae ou dans la zone de réunion officielle, dans le but de rendre hommage aux morts et de se référer à la raison de la réunion des groupes.",
-      video: require("@/assets/video/video-karanga.mp4")
-      // scultureTitle: "tikki",
-      // scultureDescription:
-      //   "Les Tikis sont des statues omniprésentes dans la culture maori. Ces représentants des dieux ou de génies sont là pour protéger les habitants Selon les sorciers polynésiens, le Tiki est le créateur de l’homme. Il serait l’héritier du mana, c’est-à-dire une énergie et un rayonnement qui relient l’univers et les êtres.Chaque Tiki a sa propre personnalité, il peut être neutre mais aussi bénéfique pour certains et maléfique pour d’autres. Ils sont présents dans beaucoup de maisons.",
-      // scultureImg: require("@/assets/img/scultureTikki.svg"),
+      video: require("@/assets/video/video-karanga.mp4"),
+      scultureTitle: "tikki",
+      scultureDescription:
+        "Les Tikis sont des statues omniprésentes dans la culture maori. Ces représentants des dieux ou de génies sont là pour protéger les habitants Selon les sorciers polynésiens, le Tiki est le créateur de l’homme. Il serait l’héritier du mana, c’est-à-dire une énergie et un rayonnement qui relient l’univers et les êtres.Chaque Tiki a sa propre personnalité, il peut être neutre mais aussi bénéfique pour certains et maléfique pour d’autres. Ils sont présents dans beaucoup de maisons.",
+      scultureImg: require("@/assets/img/scultureTikki.svg")
       // amuletteTitle: "tikki",
       // amuletteDescription:
       //   "Outres les statuettes, vous pouvez également le trouver en pendentif en os, en nacre, en jade ou en corail. Il a une valeur rituelle comme une amulette. Selon la coutume maorie, il doit se transmettre de génération en génération. Représentant un humain, il évoque les ancêtres et peut ainsi symboliser la fertilité et éloignes les énergies négatifs.",
