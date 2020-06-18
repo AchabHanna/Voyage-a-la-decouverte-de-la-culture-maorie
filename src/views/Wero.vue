@@ -28,13 +28,15 @@
         class="moreInformationIcon__iconPuipui"
       />
     </button>
-    <button v-if="iconVisible" class="moreInformation__button btn">
-      <img
-        class="moreInformation__img"
-        src="../assets/icon/icon-clic.svg"
-        alt="icon changer de page"
-      />
-    </button>
+    <router-link to="/Karanga">
+      <button v-if="iconVisible" class="moreInformation__button btn">
+        <img
+          class="moreInformation__img"
+          src="../assets/icon/icon-clic.svg"
+          alt="icon changer de page"
+        />
+      </button>
+    </router-link>
     <TimeLine @timeline-hovered="iconDisplay" @timeline-leave="iconUndisplay" />
     <transition name="slide-left">
       <LargeInformations
