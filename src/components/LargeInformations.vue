@@ -1,8 +1,5 @@
 <template>
-  <div class="informations">
-    <button class="icon btn" @click="hideModal">
-      <img src="@/assets/icon/cross.svg" alt="" class="" />
-    </button>
+  <div class="informations" @click="hideModal">
     <div class="moreInformations">
       <div class="moreInformations__wrapper">
         <div class="moreInformations__containerImg">
@@ -90,11 +87,6 @@ export default {
   z-index: 1;
   overflow: auto;
   max-width: 100vw;
-}
-.icon {
-  position: absolute;
-  top: 2px;
-  right: 2px;
 }
 .moreInformations {
   height: 90vh;

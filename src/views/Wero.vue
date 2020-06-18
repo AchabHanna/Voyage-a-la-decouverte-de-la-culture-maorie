@@ -7,8 +7,9 @@
     ></ArticleImg>
     <Muted />
     <button
-      class="moreInformationIcon__button moreInformationIcon__button--taiaha"
+      class="moreInformationIcon__button moreInformationIcon__button--taiaha btn"
       :class="[active ? activeClass : '']"
+      @click="showWindow"
     >
       <img
         src="../assets/icon/moreInfoIcon.svg"
@@ -17,7 +18,7 @@
       />
     </button>
     <button
-      class="moreInformationIcon__button moreInformationIcon__button--puipui"
+      class="moreInformationIcon__button moreInformationIcon__button--puipui btn"
       :class="[active ? activeClass : '']"
       @click="Shown"
     >
@@ -37,8 +38,8 @@
     <TimeLine @timeline-hovered="iconDisplay" @timeline-leave="iconUndisplay" />
     <transition name="slide-left">
       <LargeInformations
-        @hide-modal="isShown = false"
-        v-show="isShown"
+        @hide-modal="largeInformationIsShown = false"
+        v-show="largeInformationIsShown"
         :title="moreInformationsTitle"
         :description="moreInformationsDescription"
         :img="moreInformationsImg"
@@ -47,7 +48,15 @@
         :descriptionSecond="descriptionSecondMoreInformations"
         :descriptionThird="descriptionThirdMoreInformations"
         :descriptionFourth="descriptionFourthMoreInformations"
-        :SecondTitle="secondTitle"
+      />
+    </transition>
+    <transition name="slide-left">
+      <MoreInformations
+        @hide-window="moreInformationsIsShown = false"
+        v-show="moreInformationsIsShown"
+        :title="taiahaTitle"
+        :description="taiahaDescription"
+        :img="taiahaImg"
       />
     </transition>
   </div>
@@ -57,12 +66,13 @@ import contentServices from "@/services/contentService.js";
 export default {
   data() {
     return {
-      isShown: false,
+      largeInformationIsShown: false,
+      moreInformationsIsShown: false,
       titleLargeInformations: "tatouage",
       moreInformationsTitle: "jupe puipui",
       moreInformationsDescription:
         "Le piupui est une jupe traditionnelle maorie souvent fabriqué à partir de lin. Elle  peut être porté par des  guerriers ou bien par des femmes lorsqu’elle dansent. En effet celle-ci à l’avantage d’être fluide et de suivre facilement le mouvement corporel.",
-      moreInformationsImg: require("@/assets/img/jupePuipui.svg"),
+      moreInformationsImg: require("@/assets/img/jupeGuerrierPuipui.svg"),
       titleMoreInformations: "title",
       descriptionFirstMoreInformations:
         "Dans la culture Maorie, les tatouages représentent une interaction complexe entre une excellence artistique et un langage visuel. Il souligne l'identité et le rôle de chaque individu.",
@@ -76,6 +86,10 @@ export default {
       iconVisible: true,
       activeClass: "is-visible",
       video: require("@/assets/video/video-wero.mp4"),
+      taiahaTitle: "taiaha",
+      taiahaDescription:
+        "Le Taiaha est une arme traditionnelle maorie taillée dans un morceau de bois ou dans un os de baleine. Il est orné sur la partie haute d'un tiki au regard à la fois bienveillant et menacant suivant qu’il etait utilisé au cours de combat ou de ceremonie. La pointe est souvent ornée d'un beau decor d'entrelacs sur chaque face",
+      taiahaImg: require("@/assets/img/taiaha.svg"),
       article: {}
     };
   },
@@ -106,7 +120,10 @@ export default {
       this.iconVisible = true;
     },
     Shown() {
-      this.isShown = true;
+      this.largeInformationIsShown = true;
+    },
+    showWindow() {
+      this.moreInformationsIsShown = true;
     }
   }
 };
@@ -138,42 +155,24 @@ export default {
   z-index: 1;
   transition: 0.2s;
   &:hover {
-    transform: scale(1.3);
+    transform: scale(1.1);
   }
 }
 .moreInformation__button {
   position: absolute;
   z-index: 1;
   bottom: 60px;
-  transition: 0.6s;
-  &:hover {
-    transform: scale(1.2);
-  }
-}
-
-.fade-enter {
-  opacity: 0;
-}
-.fade-enter-active {
-  transition: opacity 4s ease-out;
-}
-.fade-leave-active {
-  transition: opacity 0.5s ease-out;
-}
-.fade-leave-to {
-  opacity: 0;
+  transition: 0.4s;
+  left: 50vw;
 }
 
 .slide-left-enter {
   transform: translateX(150px);
   opacity: 0;
 }
-.slide-left-enter-active {
-  transition: all 0.5s ease-out;
-}
-
+.slide-left-enter-active,
 .slide-left-leave-active {
-  transition: all 0.5s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .slide-left-leave-to {
