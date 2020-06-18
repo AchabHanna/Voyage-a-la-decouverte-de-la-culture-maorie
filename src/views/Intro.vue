@@ -5,20 +5,20 @@
     </div>
     <div id="mySubMenu" style="visibility: hidden;">
       <div id="test" class="sub1">
-      <router-link to="/Intro">
-        <a>INTRO</a>
-      </router-link>
+        <router-link to="/Intro">
+          <a>INTRO</a>
+        </router-link>
       </div>
       <div class="sub2">
-      <router-link to="/wero">
-         <a>POWHIRI</a>
-      </router-link>
+        <router-link to="/wero">
+          <a>POWHIRI</a>
+        </router-link>
       </div>
       <div class="sub3">
-      <router-link to="/">
-         <a>VISITE</a>
-      </router-link>
-        </div>
+        <router-link to="/">
+          <a>VISITE</a>
+        </router-link>
+      </div>
     </div>
     <Muted />
     <ArticleVideo :video="video" />
@@ -47,7 +47,7 @@
   </div>
 </template>
 
-<script> 
+<script>
 export default {
   data() {
     return {
@@ -58,16 +58,16 @@ export default {
     };
   },
   methods: {
-    myMenu: function () {
+    myMenu: function() {
       var myStyle = document.getElementById("mySubMenu").style.visibility;
 
       if (myStyle == "hidden") {
         document.getElementById("mySubMenu").style.visibility = "visible";
-      }else {
+      } else {
         document.getElementById("mySubMenu").style.visibility = "hidden";
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -81,17 +81,17 @@ export default {
     top: 20%;
     width: 200px;
     height: 200px;
-    color: #BB8233;
+    color: #bb8233;
     background: #000000a8;
     border-radius: 0 50% 50% 0;
     cursor: pointer;
   }
-  #menu h1{
+  #menu h1 {
     position: relative;
     display: flex;
     height: 200px;
     width: 200px;
-    align-items: center;    
+    align-items: center;
     justify-content: flex-end;
     right: 30px;
   }
@@ -110,7 +110,7 @@ export default {
     left: 150px;
   }
 
-  .sub1 a{
+  .sub1 a {
     position: relative;
     display: flex;
     justify-content: center;
@@ -118,14 +118,14 @@ export default {
     width: 150px;
     height: 150px;
     text-decoration: none;
-    color: #BB8233;
+    color: #bb8233;
     background: #000000a8;
     border-radius: 100%;
     transition-delay: 0.5s;
     transition: all 0.5s ease-in-out;
   }
 
-  .sub1 a:hover{
+  .sub1 a:hover {
     background: #ffffff24;
   }
 
@@ -137,7 +137,7 @@ export default {
     left: 250px;
   }
 
-  .sub2 a{
+  .sub2 a {
     position: relative;
     display: flex;
     justify-content: center;
@@ -145,14 +145,14 @@ export default {
     width: 150px;
     height: 150px;
     text-decoration: none;
-    color: #BB8233;
+    color: #bb8233;
     background: #000000a8;
     border-radius: 100%;
     transition-delay: 0.5s;
     transition: all 0.5s ease-in-out;
   }
 
-  .sub2 a:hover{
+  .sub2 a:hover {
     background: #ffffff24;
   }
 
@@ -164,7 +164,7 @@ export default {
     left: 150px;
   }
 
-  .sub3 a{
+  .sub3 a {
     position: relative;
     display: flex;
     justify-content: center;
@@ -172,14 +172,14 @@ export default {
     width: 150px;
     height: 150px;
     text-decoration: none;
-    color: #BB8233;
+    color: #bb8233;
     background: #000000a8;
     border-radius: 100%;
     transition-delay: 0.5s;
     transition: all 0.5s ease-in-out;
   }
-  
-  .sub3 a:hover{
+
+  .sub3 a:hover {
     background: #ffffff24;
   }
 
@@ -253,9 +253,10 @@ export default {
     margin-top: 50px;
 
     @include medium {
-      width: 192px;
+      width: 198px;
       height: 40px;
       margin-top: 48px;
+      font-size: 12px;
     }
 
     @include extraLarge {

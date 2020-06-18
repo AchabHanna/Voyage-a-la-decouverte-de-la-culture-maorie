@@ -7,8 +7,8 @@
 <script>
 export default {
   props: {
-    buttonText: String
-  }
+    buttonText: String,
+  },
 };
 </script>
 
@@ -18,7 +18,7 @@ export default {
   background-color: #feedcc;
   border: none;
   text-transform: uppercase;
-  font-size: 10px;
+  font-size: 12px;
   margin-top: 80px;
   width: 150px;
   height: 36px;

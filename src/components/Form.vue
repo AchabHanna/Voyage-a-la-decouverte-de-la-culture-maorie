@@ -20,9 +20,9 @@
 export default {
   data() {
     return {
-      name: ""
+      name: "",
     };
-  }
+  },
 };
 </script>
 
@@ -59,7 +59,7 @@ export default {
     background-color: #feedcc;
     border: none;
     text-transform: uppercase;
-    font-size: 10px;
+    font-size: 12px;
     margin-top: 80px;
     width: 150px;
     height: 36px;
@@ -67,11 +67,13 @@ export default {
     @include medium {
       width: 160px;
       height: 38px;
+      font-size: 12px;
     }
 
     @include extraLarge {
       width: 200px;
-      height: 50px;
+      height: 40px;
+      font-size: 14px;
     }
 
     &:hover {
