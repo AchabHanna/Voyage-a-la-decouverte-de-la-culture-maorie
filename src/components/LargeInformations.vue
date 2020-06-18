@@ -67,14 +67,14 @@ export default {
     descriptionFirst: String,
     descriptionSecond: String,
     descriptionThird: String,
-    descriptionFourth: String
+    descriptionFourth: String,
     // imgLargeInformations: String
   },
   methods: {
     hideModal() {
       this.$emit("hide-modal");
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -169,7 +169,7 @@ export default {
 }
 
 .largeInformations {
-  background-image: url("../assets/img/backgroundTatouage5.svg");
+  background-image: url("../assets/img/backgroundTissage.svg");
   @include backgroundImg(no-repeat, cover, top center);
   height: auto;
 

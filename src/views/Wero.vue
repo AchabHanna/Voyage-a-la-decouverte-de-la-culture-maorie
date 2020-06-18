@@ -70,27 +70,27 @@ export default {
     return {
       largeInformationIsShown: false,
       moreInformationsIsShown: false,
-      titleLargeInformations: "tatouage",
+      titleLargeInformations: "Tissage",
       moreInformationsTitle: "jupe puipui",
       moreInformationsDescription:
-        "Le piupui est une jupe traditionnelle maorie souvent fabriqué à partir de lin. Elle  peut être porté par des  guerriers ou bien par des femmes lorsqu’elle dansent. En effet celle-ci à l’avantage d’être fluide et de suivre facilement le mouvement corporel.",
+        "Le piupui est une jupe traditionnelle maorie souvent fabriqué à partir de lin. Elle  peut être porté par des guerriers ou bien par des femmes lorsqu’elle dansent. En effet celle-ci à l’avantage d’être fluide et de suivre facilement le mouvement corporel.",
       moreInformationsImg: require("@/assets/img/jupeGuerrierPuipui.svg"),
       titleMoreInformations: "title",
       descriptionFirstMoreInformations:
-        "Dans la culture Maorie, les tatouages représentent une interaction complexe entre une excellence artistique et un langage visuel. Il souligne l'identité et le rôle de chaque individu.",
+        "Le tissage est un des elèments fort de la culture maori. L’expression créative des maoris n’a cessé d’evoluer et de se développer à travers cet art.",
       descriptionSecondMoreInformations:
-        "Les hommes et les femmes ne portent pas les mêmes tatouages. Ceux des femmes se limitent aux extrémités du corps comme les mains, les lèvres et le menton. Seules les femmes de haut rang (femme de chef) pouvaient avoir les cuisses et les fesses tatouées. Quant aux hommes, eux ont le corps entièrement tatoué. ",
+        "Les maoris confectionnaient principalement leurs vetements à partir de lin, de coton et de peaux de bête.",
       descriptionThirdMoreInformations:
-        "Plus l’homme est tatoué, plus son prestige est grand. Être tatoué est un signe de force, de pouvoir et de richesse pour l’individu. On peut observer les tatouages les plus élaborés sur les guerriers ou les chefs. ",
+        "Hineteiwaiwa est la principale déesse de la maison du tissage whare pora, elle représente les arts pratiqués par les femmes.Pour les maoris le tissage est un état d’être.",
       descriptionFourthMoreInformations:
-        "La méthode de tatouage maori est différente de celle du monde occidental. Elle est basée sur l'utilisation de peignes à dents, de différentes largeurs, appelées uhi. Les peignes sont trempés dans un pigment foncé et frappent la peau à petit coup avec de petits maillets appelés tā. Les dents du peigne transpercent la peau et déposent le pigment. ",
+        "Hineteiwaiwa est la principale déesse de la maison du tissage whare pora, elle représente les arts pratiqués par les femmes.Pour les maoris le tissage est un état d’être.",
       active: false,
       iconVisible: true,
       activeClass: "is-visible",
       video: require("@/assets/video/video-wero.mp4"),
       taiahaTitle: "taiaha",
       taiahaDescription:
-        "Le Taiaha est une arme traditionnelle maorie taillée dans un morceau de bois ou dans un os de baleine. Il est orné sur la partie haute d'un tiki au regard à la fois bienveillant et menacant suivant qu’il etait utilisé au cours de combat ou de ceremonie. La pointe est souvent ornée d'un beau decor d'entrelacs sur chaque face",
+        "Le Taiaha est une arme traditionnelle maorie taillée dans un morceau de bois ou dans un os de baleine. Il est orné sur la partie haute d'un tiki au regard à la fois bienveillant et menacant suivant qu’il etait utilisé au cours de combat ou de ceremonie. La pointe est souvent ornée d'un beau decor d'entrelacs sur chaque face.",
       taiahaImg: require("@/assets/img/taiaha.svg"),
       article: {},
     };
