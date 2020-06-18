@@ -3,7 +3,7 @@
     <div class="moreInformations">
       <div class="moreInformations__wrapper">
         <div class="moreInformations__containerImg">
-          <img :src="img" alt="jupe puipui" class="moreInformations__img" />
+          <img :src="img" alt="image" class="moreInformations__img" />
         </div>
         <div class="moreInformations__containerText">
           <h1 class="moreInformations__title">{{ title }}</h1>
@@ -13,9 +13,9 @@
       <div class="moreInformations__filter"></div>
     </div>
 
-    <div class="largeInformations">
+    <div :class="largeInformationsStyleTissage">
       <div class="filter">
-        <div class="largeInformations__container">
+        <div :class="bgStyle">
           <h1 class="largeInformations__title">
             {{ titleLargeInformations }}
           </h1>
@@ -67,12 +67,22 @@ export default {
     descriptionFirst: String,
     descriptionSecond: String,
     descriptionThird: String,
-    descriptionFourth: String
-    // imgLargeInformations: String
+    descriptionFourth: String,
+    background: String
   },
   methods: {
     hideModal() {
       this.$emit("hide-modal");
+    }
+  },
+
+  computed: {
+    bgStyle() {
+      if (this.background == "tissage") {
+        return "largeInformationsStyleTissage";
+      } else {
+        return "largeInformationsStyleTatouage";
+      }
     }
   }
 };
@@ -169,10 +179,6 @@ export default {
 }
 
 .largeInformations {
-  background-image: url("../assets/img/BackgroundTissage.svg");
-  @include backgroundImg(no-repeat, cover, top center);
-  height: auto;
-
   &__title,
   &__titleSecond {
     text-align: center;
@@ -234,6 +240,17 @@ export default {
     rgba(24, 20, 16, 0.48) 37.11%,
     rgba(20, 17, 11, 0) 99.03%
   );
+  height: auto;
+}
+.largeInformationsStyleTissage {
+  background-image: url("../assets/img/BackgroundTissage.svg");
+  @include backgroundImg(no-repeat, cover, top center);
+  height: auto;
+}
+
+.largeInformationsStyleTatouage {
+  background-image: url("../assets/img/backgroundTatouage4.svg");
+  @include backgroundImg(no-repeat, cover, top center);
   height: auto;
 }
 </style>
