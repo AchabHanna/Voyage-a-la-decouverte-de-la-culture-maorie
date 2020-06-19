@@ -1,5 +1,5 @@
 <template>
-  <div class="karanga" id="karanga">
+  <div>
     <ArticleVideo :video="video" />
     <ArticleImg :title="title" :description="description"></ArticleImg>
     <Muted />
@@ -69,11 +69,12 @@ export default {
       amuletteTitle: "tikki",
       amuletteDescription:
         "Outres les statuettes, vous pouvez également le trouver en pendentif en os, en nacre, en jade ou en corail. Il a une valeur rituelle comme une amulette. Selon la coutume maorie, il doit se transmettre de génération en génération. Représentant un humain, il évoque les ancêtres et peut ainsi symboliser la fertilité et éloignes les énergies négatifs.",
-      amuletteImg: require("@/assets/img/amuletteTiki-2.jpg")
+      amuletteImg: require("@/assets/img/amuletteTiki-2.jpg"),
+      article: {}
     };
   },
   async mounted() {
-    contentServices.getArticle(1).then(response => {
+    contentServices.getArticle(2).then(response => {
       this.article = response.data;
       console.log(response.data);
     });

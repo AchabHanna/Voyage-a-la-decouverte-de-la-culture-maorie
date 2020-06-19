@@ -10,9 +10,9 @@ const apiClient = axios.create({
 });
 
 export default {
-  getArticles() {
-    return apiClient.get("/articles");
-  },
+  //   getArticles() {
+  //     return apiClient.get("/articles");
+  //   },
   getArticle(id) {
     return apiClient.get("/article/" + id);
   }

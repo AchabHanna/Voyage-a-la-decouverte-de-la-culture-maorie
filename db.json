@@ -13,6 +13,41 @@
       "title": "Wero",
       "description": "Lors de l'accueil des manuhiri (visiteurs) un des guerriers de la tribu s'avance pour effectuer une danse le Wero.Cette danse permet au guerrier de confirmer les intentions des manhuri (visiteurs) et de les dissuader de les attaquer. Il dépose ensuite un rautapu (feuille) que le manuhiri (visiteur) ramasse en signe de paix.",
       "video": "video/video-wero.mp4"
+    },
+    {
+      "id": 2,
+      "title": "taiaha",
+      "description": "Le Taiaha est une arme traditionnelle maorie taillée dans un morceau de bois ou dans un os de baleine. Il est orné sur la partie haute d'un tiki au regard à la fois bienveillant et menacant suivant qu’il etait utilisé au cours de combat ou de ceremonie. La pointe est souvent ornée d'un beau decor d'entrelacs sur chaque face",
+      "img": "video/video-wero.mp4"
+    },
+    {
+      "id": 4,
+      "title": "jupe Piupiu",
+      "description": "Le piupui est une jupe traditionnelle maorie souvent fabriqué à partir de lin. Elle  peut être porté par des  guerriers ou bien par des femmes lorsqu’elle dansent. En effet celle-ci à l’avantage d’être fluide et de suivre facilement le mouvement corporel.",
+      "img": "video/video-wero.mp4"
+    },
+    {
+      "id": 5,
+      "title": "Tissage",
+      "descriptionFirst": "Le tissage est un des elèments fort de la culture maori. L’expression créative des maoris n’a cessé d’evoluer et de se développer à travers cet art.",
+      "descriptionSecond": "Les maoris confectionnaient principalement leurs vetements à partir de lin, de coton et de peaux de bête.",
+      "descriptionThird": "Hineteiwaiwa est la principale déesse de la maison du tissage whare pora, elle représente les arts pratiqués par les femmes. Pour les maoris le tissage est un état d’être.",
+      "descriptionFouth": "Les tisserands initiés dans ces maisons à travers des céremonies et des incantations Karakia étaient portés dans un état de transe qui leur permettait d’élever leur niveau de conscience et d’etre prêt à recevoir les connaissances.",
+      "img": "video/video-wero.mp4"
+    },
+    {
+      "id": 6,
+      "titleTiki": "tiki",
+      "descriptionTiki": "Les Tikis sont des statues omniprésentes dans la culture maori. Ces représentants des dieux ou de génies sont là pour protéger les habitants. Selon les sorciers polynésiens, le Tiki est le créateur de l’homme. Il serait l’héritier du mana, c’est-à-dire une énergie et un rayonnement qui relient l’univers et les êtres. Chaque Tiki a sa propre personnalité, il peut être neutre mais aussi bénéfique pour certains et maléfique pour d’autres. Ils sont présents dans beaucoup de maisons.",
+      "titleAmulette": "Amulette tiki",
+      "descriptionAmulette": "Outres les statuettes, vous pouvez également le trouver en pendentif en os, en nacre, en jade ou en corail. Il a une valeur rituelle comme une amulette. Selon la coutume maorie, il doit se transmettre de génération en génération. Représentant un humain, il évoque les ancêtres et peut ainsi symboliser la fertilité et éloignes les énergies négatifs.",
+      "img": "video/video-wero.mp4"
+    },
+    {
+      "id": 7,
+      "titleTiki": "hongi",
+      "description": "Le hongi est le salut traditionnel maori, l’origine de ce geste remonterait à la création de l'humanité.À la création de la première femme, Hine ahu one "femme faite de terre", par le dieu créateur Tane, celui-ci l'aurait fabriquée avec de la glaise avant de lui insuffler la vie par les narines. D'où cet échange de souffle appelé 'ha', ou le souffle de la vie. Aujourd’hui cette pratique est utilisée par des membres du gouvernement ou de la famille royale lors de rencontres officielles,
+      "img": "video/video-wero.mp4"
     }
   ]
 }

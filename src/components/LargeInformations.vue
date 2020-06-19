@@ -13,46 +13,46 @@
       <div class="moreInformations__filter"></div>
     </div>
 
-    <div :class="largeInformationsStyleTissage">
-      <div class="filter">
-        <div :class="bgStyle">
-          <h1 class="largeInformations__title">
-            {{ titleLargeInformations }}
-          </h1>
+    <!-- <div :class="largeInformationsStyleTissage"> -->
+    <div class="filter">
+      <div :class="bgStyle">
+        <h1 class="largeInformations__title">
+          {{ titleLargeInformations }}
+        </h1>
 
-          <div class="">
-            <p
-              class="largeInformations__description largeInformations__description--first"
-            >
-              {{ descriptionFirst }}
-            </p>
-          </div>
+        <div class="">
+          <p
+            class="largeInformations__description largeInformations__description--first"
+          >
+            {{ descriptionFirst }}
+          </p>
+        </div>
 
-          <div class="largeInformations__position">
-            <p
-              class="largeInformations__description largeInformations__description--second"
-            >
-              {{ descriptionSecond }}
-            </p>
-          </div>
-          <div class="">
-            <p
-              class="largeInformations__description largeInformations__description--tirdh"
-            >
-              {{ descriptionThird }}
-            </p>
-          </div>
+        <div class="largeInformations__position">
+          <p
+            class="largeInformations__description largeInformations__description--second"
+          >
+            {{ descriptionSecond }}
+          </p>
+        </div>
+        <div class="">
+          <p
+            class="largeInformations__description largeInformations__description--tirdh"
+          >
+            {{ descriptionThird }}
+          </p>
+        </div>
 
-          <div class="largeInformations__position">
-            <p
-              class="largeInformations__description largeInformations__description--fourth"
-            >
-              {{ descriptionFourth }}
-            </p>
-          </div>
+        <div class="largeInformations__position">
+          <p
+            class="largeInformations__description largeInformations__description--fourth"
+          >
+            {{ descriptionFourth }}
+          </p>
         </div>
       </div>
     </div>
+    <!-- </div> -->
   </div>
 </template>
 
@@ -100,7 +100,7 @@ export default {
 }
 .moreInformations {
   height: 90vh;
-  background: rgba(2, 2, 2, 0.9);
+  background-color: #030303;
 
   &__wrapper {
     @include flexbox(column, initial, center);
@@ -243,7 +243,7 @@ export default {
   height: auto;
 }
 .largeInformationsStyleTissage {
-  background-image: url("../assets/img/BackgroundTissage.svg");
+  background-image: url("../assets/img/backgroundTissage2.jpg");
   @include backgroundImg(no-repeat, cover, top center);
   height: auto;
 }

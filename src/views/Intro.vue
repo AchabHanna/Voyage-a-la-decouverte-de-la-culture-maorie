@@ -1,25 +1,5 @@
 <template>
   <div class="intro">
-    <div v-on:click="myMenu" id="menu">
-      <h1>MENU</h1>
-    </div>
-    <div id="mySubMenu" style="visibility: hidden;">
-      <div id="test" class="sub1">
-        <router-link to="/Intro">
-          <a>INTRO</a>
-        </router-link>
-      </div>
-      <div class="sub2">
-        <router-link to="/wero">
-          <a>POWHIRI</a>
-        </router-link>
-      </div>
-      <div class="sub3">
-        <router-link to="/">
-          <a>VISITE</a>
-        </router-link>
-      </div>
-    </div>
     <Muted />
     <ArticleVideo :video="video" />
     <div class="intro__wrapper">
@@ -39,7 +19,7 @@
           Clique sur ce symbole pour avoir plus d’informations
         </p>
       </div>
-      <router-link to="/wero">
+      <router-link :to="{ name: 'Wero' }">
         <button class="intro__button">decouvrir la ceremonie</button>
       </router-link>
     </div>
@@ -52,21 +32,9 @@ export default {
   data() {
     return {
       video: require("@/assets/video/video-intro.mp4"),
-      name: this.$route.params.name,
       title: "Haero mai",
       subtitle: "Bienvenue"
     };
-  },
-  methods: {
-    myMenu: function() {
-      var myStyle = document.getElementById("mySubMenu").style.visibility;
-
-      if (myStyle == "hidden") {
-        document.getElementById("mySubMenu").style.visibility = "visible";
-      } else {
-        document.getElementById("mySubMenu").style.visibility = "hidden";
-      }
-    }
   }
 };
 </script>
@@ -75,114 +43,6 @@ export default {
 @import "@/assets/css/styles.scss";
 
 .intro {
-  #menu {
-    position: absolute;
-    left: -100px;
-    top: 20%;
-    width: 200px;
-    height: 200px;
-    color: #bb8233;
-    background: #000000a8;
-    border-radius: 0 50% 50% 0;
-    cursor: pointer;
-  }
-  #menu h1 {
-    position: relative;
-    display: flex;
-    height: 200px;
-    width: 200px;
-    align-items: center;
-    justify-content: flex-end;
-    right: 30px;
-  }
-  .mySubMenu {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    background: rgba(0, 0, 0, 0.659);
-  }
-
-  .sub1 {
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    top: 5%;
-    left: 150px;
-  }
-
-  .sub1 a {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 150px;
-    text-decoration: none;
-    color: #bb8233;
-    background: #000000a8;
-    border-radius: 100%;
-    transition-delay: 0.5s;
-    transition: all 0.5s ease-in-out;
-  }
-
-  .sub1 a:hover {
-    background: #ffffff24;
-  }
-
-  .sub2 {
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    top: 25%;
-    left: 250px;
-  }
-
-  .sub2 a {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 150px;
-    text-decoration: none;
-    color: #bb8233;
-    background: #000000a8;
-    border-radius: 100%;
-    transition-delay: 0.5s;
-    transition: all 0.5s ease-in-out;
-  }
-
-  .sub2 a:hover {
-    background: #ffffff24;
-  }
-
-  .sub3 {
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    top: 45%;
-    left: 150px;
-  }
-
-  .sub3 a {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 150px;
-    text-decoration: none;
-    color: #bb8233;
-    background: #000000a8;
-    border-radius: 100%;
-    transition-delay: 0.5s;
-    transition: all 0.5s ease-in-out;
-  }
-
-  .sub3 a:hover {
-    background: #ffffff24;
-  }
-
   &__wrapper {
     height: 80vh;
     @include flexbox(column, center, center);
