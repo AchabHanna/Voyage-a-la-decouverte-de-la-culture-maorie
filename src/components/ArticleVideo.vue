@@ -1,6 +1,6 @@
 <template>
   <div class="articleVideo">
-    <video muted class="articleVideo__video" id="video">
+    <video class="articleVideo__video" id="video">
       <source :src="video" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
@@ -16,10 +16,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.test {
-  width: 100vw;
-  height: 100vh;
-}
 .articleVideo__video {
   object-fit: cover;
   height: 100vh;
