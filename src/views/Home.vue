@@ -22,7 +22,7 @@ export default {};
 @import "@/assets/css/styles.scss";
 
 .home {
-  background-image: url("../assets/img/backgroundHome.svg");
+  background-image: url("../assets/img/backgroundHome.jpg");
   @include backgroundImg(no-repeat, cover, top center);
   position: absolute;
   left: 0;

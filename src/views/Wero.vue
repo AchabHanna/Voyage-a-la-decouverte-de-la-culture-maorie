@@ -79,7 +79,7 @@ export default {
       moreInformationsTitle: "jupe puipui",
       moreInformationsDescription:
         "Le piupui est une jupe traditionnelle maorie souvent fabriqué à partir de lin. Elle  peut être porté par des guerriers ou bien par des femmes lorsqu’elle dansent. En effet celle-ci à l’avantage d’être fluide et de suivre facilement le mouvement corporel.",
-      moreInformationsImg: require("@/assets/img/jupeGuerrierPuipui.svg"),
+      moreInformationsImg: require("@/assets/img/jupe-piupiu.jpg"),
       titleMoreInformations: "title",
       descriptionFirstMoreInformations:
         "Le tissage est un des elèments fort de la culture maori. L’expression créative des maoris n’a cessé d’evoluer et de se développer à travers cet art.",
@@ -100,7 +100,11 @@ export default {
   async mounted() {
     contentServices.getArticle(1).then(response => {
       this.article = response.data;
-      console.log(response.data);
+      console.log(this.article);
+      // async mounted() {
+      //   contentServices.getArticle(26).then(response => {
+      //     this.article = response.data.article.contents;
+      //     console.log(this.article.contents);
     });
 
     await this.isVisible();
