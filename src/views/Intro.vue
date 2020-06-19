@@ -1,7 +1,11 @@
 <template>
   <div class="intro">
     <Muted />
-    <ArticleVideo :video="video" />
+    <video autoplay class="articleVideo__video">
+      <source src="../assets/video/video-intro.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <!-- <ArticleVideo :video="video" /> -->
     <div class="intro__wrapper">
       <h1 class="intro__title">{{ title }} {{ name }}</h1>
       <p class="intro__subtitle">{{ subtitle }} {{ name }}</p>
@@ -31,7 +35,7 @@
 export default {
   data() {
     return {
-      video: require("@/assets/video/video-intro.mp4"),
+      // video: require("@/assets/video/video-intro.mp4"),
       title: "Haero mai",
       subtitle: "Bienvenue"
     };
@@ -41,7 +45,15 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/css/styles.scss";
-
+.articleVideo__video {
+  object-fit: cover;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
 .intro {
   &__wrapper {
     height: 80vh;
