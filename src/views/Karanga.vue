@@ -1,7 +1,14 @@
 <template>
   <div>
     <ArticleVideo :video="video" />
-    <ArticleImg :title="title" :description="description"></ArticleImg>
+    <transition name="opacity">
+      <ArticleImg
+        @is-visible="vidIsVisible"
+        v-show="visible"
+        :title="title"
+        :description="description"
+      ></ArticleImg>
+    </transition>
     <Muted />
     <button
       class="moreInformationIcon__button moreInformationIcon__button--sculture btn"
@@ -54,6 +61,7 @@ import contentServices from "@/services/contentService.js";
 export default {
   data() {
     return {
+      visible: true,
       moreInformationsIsShown: false,
       active: false,
       iconVisible: true,
@@ -100,6 +108,9 @@ export default {
     },
     showWindow() {
       this.moreInformationsIsShown = true;
+    },
+    vidIsVisible() {
+      this.visible = !this.visible;
     }
   }
 };

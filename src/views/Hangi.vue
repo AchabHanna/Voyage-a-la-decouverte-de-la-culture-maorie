@@ -1,7 +1,14 @@
 <template>
   <div>
     <ArticleVideo :video="video" />
-    <ArticleImg :title="title" :description="description"></ArticleImg>
+    <transition name="opacity">
+      <ArticleImg
+        @is-visible="vidIsVisible"
+        v-show="visible"
+        :title="title"
+        :description="description"
+      ></ArticleImg>
+    </transition>
     <TimeLine />
     <Muted />
     <!-- <button
@@ -15,7 +22,7 @@
         class="moreInformationIcon__iconTaiaha"
       />
     </button> -->
-    <router-link to="/Karanga">
+    <router-link to="/Wero">
       <button v-if="iconVisible" class="moreInformation__button btn">
         <img
           class="moreInformation__img"
@@ -33,6 +40,7 @@ import contentServices from "@/services/contentService.js";
 export default {
   data() {
     return {
+      visible: true,
       active: false,
       iconVisible: true,
       activeClass: "is-visible",
@@ -68,10 +76,13 @@ export default {
     },
     iconUndisplay() {
       this.iconVisible = true;
-    }
+    },
     // showWindow() {
     //   this.moreInformationsIsShown = true;
     // }
+    vidIsVisible() {
+      this.visible = !this.visible;
+    }
   }
 };
 </script>

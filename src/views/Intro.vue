@@ -6,7 +6,7 @@
       <h1 class="intro__title">{{ title }} {{ name }}</h1>
       <p class="intro__subtitle">{{ subtitle }} {{ name }}</p>
       <p class="intro__message">
-        À travers la cérémonie d’accueil du powihiri tu pourras découvrir la
+        À travers la cérémonie d’accueil du powhiri tu pourras découvrir la
         culture maori.
       </p>
       <div class="intro__container">
