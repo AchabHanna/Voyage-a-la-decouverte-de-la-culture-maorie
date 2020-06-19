@@ -41,6 +41,8 @@ export default {
   methods: {
     videoIsVisible() {
       this.$emit("is-visible");
+      let video = document.getElementById("video");
+      video.play();
     }
   }
 };

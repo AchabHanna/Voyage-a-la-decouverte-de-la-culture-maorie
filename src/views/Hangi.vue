@@ -44,8 +44,8 @@ export default {
       active: false,
       iconVisible: true,
       activeClass: "is-visible",
-      video: require("@/assets/video/video-wero.mp4"),
-      title: "HANGI",
+      video: require("@/assets/video/video-hangi.mp4"),
+      title: "hangi",
       description:
         " Le hangi traditionnel consiste à envelopper des paniers d’aliments contenant de la viande et des légumes (patate douce, maïs, carotte…) et de les cuire dans un trou creusé dans le sol au fond duquel sont déposées des pierres volcaniques chauffées. On trouve ce plat le plus souvent dans la région de Rotorua au Nord de l’île.",
       article: {}
