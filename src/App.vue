@@ -23,7 +23,7 @@ p {
   cursor: pointer;
   border: none;
   outline: none;
-  transition: scale 1s;
+  transition: scale 0.4s;
   &:hover {
     transform: scale(1.1);
   }
@@ -48,7 +48,7 @@ p {
 }
 .opacity-enter-active,
 .opacity-leave-active {
-  transition: opacity 0.6s ease-out;
+  transition: opacity 0.4s linear;
 }
 
 .opacity-leave-to {
@@ -57,7 +57,7 @@ p {
 .moreInformationIcon__button {
   opacity: 1;
   display: none;
-  transition: opacity 1s;
+  transition: opacity 0.4s;
 }
 
 .moreInformation__button {
@@ -65,6 +65,13 @@ p {
   z-index: 1;
   bottom: 60px;
   transition: 0.4s;
-  left: 50vw;
+  left: 48vw;
+}
+
+.moreInformation__buttonIcon {
+  position: absolute;
+  z-index: 1;
+  bottom: 60px;
+  transition: 0.4s;
 }
 </style>

@@ -1,7 +1,14 @@
 <template>
   <div class="hongi">
     <ArticleVideo :video="video" />
-    <ArticleImg :title="title" :description="description"></ArticleImg>
+    <transition name="opacity">
+      <ArticleImg
+        @is-visible="vidIsVisible"
+        v-show="visible"
+        :title="title"
+        :description="description"
+      ></ArticleImg>
+    </transition>
     <Muted />
     <button
       class="moreInformationIcon__button moreInformationIcon__button--tattoo btn"
@@ -48,8 +55,9 @@ import contentServices from "@/services/contentService.js";
 export default {
   data() {
     return {
+      visible: true,
       largeInformationIsShown: false,
-      active: true,
+      active: false,
       iconVisible: true,
       activeClass: "is-visible",
       title: "Hongi",
@@ -89,9 +97,9 @@ export default {
         this.showButton();
       };
     },
-    // showButton() {
-    //   this.active = !this.active;
-    // },
+    showButton() {
+      this.active = !this.active;
+    },
     iconDisplay() {
       this.iconVisible = false;
     },
@@ -100,6 +108,9 @@ export default {
     },
     Shown() {
       this.largeInformationIsShown = true;
+    },
+    vidIsVisible() {
+      this.visible = !this.visible;
     }
   }
 };

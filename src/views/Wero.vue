@@ -1,10 +1,15 @@
 <template>
   <div>
     <ArticleVideo :video="video" />
-    <ArticleImg
-      :title="article.title"
-      :description="article.description"
-    ></ArticleImg>
+
+    <transition name="opacity">
+      <ArticleImg
+        @is-visible="vidIsVisible"
+        v-show="visible"
+        :title="titleWero"
+        :description="descriptionWero"
+      ></ArticleImg>
+    </transition>
     <Muted />
     <button
       class="moreInformationIcon__button moreInformationIcon__button--taiaha btn"
@@ -70,11 +75,15 @@ import contentServices from "@/services/contentService.js";
 export default {
   data() {
     return {
+      visible: true,
       largeInformationIsShown: false,
       moreInformationsIsShown: false,
       active: false,
       iconVisible: true,
       activeClass: "is-visible",
+      titleWero: "Wero",
+      descriptionWero:
+        "Lors de l'accueil des manuhiri (visiteurs) un des guerriers de la tribu s'avance pour effectuer une danse le Wero.Cette danse permet au guerrier de confirmer les intentions des manhuri (visiteurs) et de les dissuader de les attaquer. Il dépose ensuite un rautapu (feuille) que le manuhiri (visiteur) ramasse en signe de paix.",
       titleLargeInformations: "Tissage",
       moreInformationsTitle: "jupe puipui",
       moreInformationsDescription:
@@ -132,6 +141,9 @@ export default {
     },
     showWindow() {
       this.moreInformationsIsShown = true;
+    },
+    vidIsVisible() {
+      this.visible = !this.visible;
     }
   }
 };
@@ -160,5 +172,16 @@ export default {
   &:hover {
     transform: scale(1.1);
   }
+}
+.opacity-enter {
+  opacity: 0;
+}
+.opacity-enter-active,
+.opacity-leave-active {
+  transition: opacity 0.6s ease-out;
+}
+
+.opacity-leave-to {
+  opacity: 0;
 }
 </style>

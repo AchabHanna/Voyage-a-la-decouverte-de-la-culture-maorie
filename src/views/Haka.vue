@@ -1,7 +1,14 @@
 <template>
   <div>
     <ArticleVideo :video="video" />
-    <ArticleImg :title="hakaTitle" :description="hakaDescription" />
+    <transition name="opacity">
+      <ArticleImg
+        @is-visible="vidIsVisible"
+        v-show="visible"
+        :title="hakaTitle"
+        :description="hakaDescription"
+      />
+    </transition>
     <Muted />
     <!-- <button
       class="moreInformationIcon__button moreInformationIcon__button btn"
@@ -32,6 +39,7 @@ import contentServices from "@/services/contentService.js";
 export default {
   data() {
     return {
+      visible: true,
       // active: false,
       iconVisible: true,
       // activeClass: "is-visible",
@@ -66,10 +74,14 @@ export default {
     },
     iconUndisplay() {
       this.iconVisible = true;
-    }
+    },
     // showWindow() {
     //   this.moreInformationsIsShown = true;
     // }
+
+    vidIsVisible() {
+      this.visible = !this.visible;
+    }
   }
 };
 </script>
