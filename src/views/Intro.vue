@@ -5,12 +5,11 @@
       <source src="../assets/video/video-intro.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
-    <!-- <ArticleVideo :video="video" /> -->
     <div class="intro__wrapper">
       <h1 class="intro__title">{{ title }} {{ name }}</h1>
       <p class="intro__subtitle">{{ subtitle }} {{ name }}</p>
       <p class="intro__message">
-        À travers la cérémonie d’accueil du powhiri tu pourras découvrir la
+        À travers la cérémonie d’accueil du powihiri tu pourras découvrir la
         culture maori.
       </p>
       <div class="intro__container">
@@ -23,7 +22,7 @@
           Clique sur ce symbole pour avoir plus d’informations
         </p>
       </div>
-      <router-link :to="{ name: 'Wero' }">
+      <router-link to="/wero">
         <button class="intro__button">decouvrir la ceremonie</button>
       </router-link>
     </div>
@@ -35,7 +34,8 @@
 export default {
   data() {
     return {
-      // video: require("@/assets/video/video-intro.mp4"),
+      video: require("@/assets/video/video-intro.mp4"),
+      name: this.$route.params.name,
       title: "Haero mai",
       subtitle: "Bienvenue"
     };
@@ -45,15 +45,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/css/styles.scss";
-.articleVideo__video {
-  object-fit: cover;
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
+
 .intro {
   &__wrapper {
     height: 80vh;
@@ -149,5 +141,14 @@ export default {
     top: 0;
     z-index: -1;
   }
+}
+.articleVideo__video {
+  object-fit: cover;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 </style>
