@@ -63,7 +63,7 @@ export default {
       title: "Hongi",
       description:
         "Le hongi est le salut traditionnel maori, l’origine de ce geste remonterait à la création de l'humanité. À la création de la première femme, Hine ahu one ' femme faite de terre ', par le dieu créateur Tane, celui-ci l'aurait fabriquée avec de la glaise avant de lui insuffler la vie par les narines. D'où cet échange de souffle appelé ' ha ', ou le souffle de la vie.Aujourd’hui, cette pratique est utilisée par des membres du gouvernement ou de la famille royale lors de rencontres officielles.",
-      titleLargeInformations: "le toutouages",
+      titleLargeInformations: "le tatouage",
       moreInformationsTitle: "moko",
       moreInformationsDescription:
         "Le moko est le tatouage facial maori, son procédé se nomme Ta Moko. Tous les symboles utilisés ont une signification. C’est un langage visuel qui connecte celui qui le porte à son whakapapa (généalogie).Le visage chez les maoris, était considérée comme la partie du corps la plus sacrée. Toutes les personnes de haut-rangs étaient tatoués, ceux qui ne l’étaient pas, étaient considérés comme n’ayant aucun statut social.",
@@ -77,11 +77,11 @@ export default {
       descriptionFourthMoreInformations:
         "La méthode de tatouage maori est différente de celle du monde occidental. Elle est basée sur l'utilisation de peignes à dents, de différentes largeurs, appelées uhi. Les peignes sont trempés dans un pigment foncé et frappent la peau à petit coup avec de petits maillets appelés tā. Les dents du peigne transpercent la peau et déposent le pigment. ",
       video: require("@/assets/video/video-hongi.mp4"),
-      article: {}
+      article: {},
     };
   },
   async mounted() {
-    contentServices.getArticle(1).then(response => {
+    contentServices.getArticle(1).then((response) => {
       this.article = response.data;
       console.log(response.data);
     });
@@ -111,8 +111,8 @@ export default {
     },
     vidIsVisible() {
       this.visible = !this.visible;
-    }
-  }
+    },
+  },
 };
 </script>
 
