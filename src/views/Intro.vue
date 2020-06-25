@@ -50,7 +50,7 @@ export default {
   &__wrapper {
     height: 80vh;
     @include flexbox(column, center, center);
-    font-family: "robotto";
+    font-family: $Avenir;
     font-size: 16px;
     color: $white;
     margin: 10px;
