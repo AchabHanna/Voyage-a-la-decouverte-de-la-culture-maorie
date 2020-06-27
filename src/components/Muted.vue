@@ -80,7 +80,17 @@ export default {
   cursor: pointer;
 
   &__muteButton {
+<<<<<<< Updated upstream
     transition: 0.6s;
+=======
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    transition: 0.6s;
+    &:hover {
+      transform: scale(1.1);
+    }
+>>>>>>> Stashed changes
 
     &--unmute {
       display: none;

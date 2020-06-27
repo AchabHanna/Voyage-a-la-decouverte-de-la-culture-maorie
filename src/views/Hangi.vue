@@ -22,7 +22,7 @@
         class="moreInformationIcon__iconTaiaha"
       />
     </button> -->
-    <router-link to="/Wero">
+    <router-link to="/ned">
       <button v-if="iconVisible" class="moreInformation__button btn">
         <img
           class="moreInformation__img"

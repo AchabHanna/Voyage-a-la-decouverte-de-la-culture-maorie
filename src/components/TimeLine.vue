@@ -308,8 +308,10 @@ export default {
   }
 
   &__containerImg {
+    opacity: 1;
     position: absolute;
     bottom: 19px;
+    transition: opacity 6s;
 
     width: 100vw;
     @include flexbox(row, space-around, baseline);
@@ -382,6 +384,12 @@ export default {
     border: none;
     cursor: pointer;
     transition: 0.6s;
+<<<<<<< Updated upstream
+=======
+    &:hover {
+      transform: scale(1.3);
+    }
+>>>>>>> Stashed changes
 
     &--wero {
       background-color: #9f1f21;
@@ -421,8 +429,11 @@ export default {
     z-index: -1;
     opacity: 1;
     transition: opacity 0.6s;
+<<<<<<< Updated upstream
     position: absolute;
     top: 0;
+=======
+>>>>>>> Stashed changes
   }
   .display {
     background-color: $filterColorTimeline;
@@ -430,9 +441,12 @@ export default {
     height: 100vh;
     opacity: 0;
     transition: opacity 0.6s;
+<<<<<<< Updated upstream
     position: absolute;
     top: 0;
     pointer-events: none;
+=======
+>>>>>>> Stashed changes
   }
 }
 </style>
