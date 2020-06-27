@@ -1,8 +1,4 @@
 <template>
-<<<<<<< Updated upstream
-  <div>
-    <ArticleVideo :video="video" />
-=======
   <div class="moreInformation">
     <Muted />
     <ArticleVideo :video="video" />
@@ -31,7 +27,6 @@
         class="moreInformationIcon__iconPuipui"
       />
     </button>
->>>>>>> Stashed changes
 
     <transition name="opacity">
       <ArticleImg
@@ -106,7 +101,6 @@ import contentServices from "@/services/contentService.js";
 export default {
   data() {
     return {
-<<<<<<< Updated upstream
       visible: true,
       largeInformationIsShown: false,
       moreInformationsIsShown: false,
@@ -135,26 +129,17 @@ export default {
       taiahaDescription:
         "Le Taiaha est une arme traditionnelle maorie taillée dans un morceau de bois ou dans un os de baleine. Il est orné sur la partie haute d'un tiki au regard à la fois bienveillant et menacant suivant qu’il etait utilisé au cours de combat ou de ceremonie. La pointe est souvent ornée d'un beau decor d'entrelacs sur chaque face.",
       taiahaImg: require("@/assets/img/taiaha--3.jpg"),
-=======
-      active: false,
-      activeClass: "is-visible",
-      video: require("@/assets/video/video-wero.mp4"),
->>>>>>> Stashed changes
       article: {}
     };
   },
   async mounted() {
     contentServices.getArticle(1).then(response => {
       this.article = response.data;
-<<<<<<< Updated upstream
       console.log(this.article);
       // async mounted() {
       //   contentServices.getArticle(26).then(response => {
       //     this.article = response.data.article.contents;
       //     console.log(this.article.contents);
-=======
-      console.log(response.data);
->>>>>>> Stashed changes
     });
 
     await this.isVisible();
@@ -167,7 +152,6 @@ export default {
       video.onended = () => {
         this.showButton();
       };
-<<<<<<< Updated upstream
     },
     showButton() {
       this.active = !this.active;
@@ -186,28 +170,15 @@ export default {
     },
     vidIsVisible() {
       this.visible = !this.visible;
-=======
     },
     showButton() {
       this.active = !this.active;
->>>>>>> Stashed changes
     }
   }
 };
 </script>
 
 <style lang="scss" scoped>
-<<<<<<< Updated upstream
-@import "@/assets/css/styles.scss";
-.moreInformationIcon__button--taiaha {
-  top: 42vh;
-  right: 26vw;
-}
-
-.moreInformationIcon__button--puipui {
-  top: 64vh;
-  right: 16vw;
-=======
 .moreInformationIcon__button {
   opacity: 1;
   display: none;
@@ -221,7 +192,6 @@ export default {
     top: 60vh;
     right: 28vw;
   }
->>>>>>> Stashed changes
 }
 .is-visible {
   display: block;
@@ -233,7 +203,6 @@ export default {
   z-index: 1;
   transition: 0.2s;
   &:hover {
-<<<<<<< Updated upstream
     transform: scale(1.1);
   }
 }
@@ -248,9 +217,4 @@ export default {
 .opacity-leave-to {
   opacity: 0;
 }
-=======
-    transform: scale(1.3);
-  }
-}
->>>>>>> Stashed changes
 </style>
