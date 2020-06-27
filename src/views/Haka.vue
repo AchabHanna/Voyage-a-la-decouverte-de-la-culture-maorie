@@ -10,17 +10,6 @@
       />
     </transition>
     <Muted />
-    <!-- <button
-      class="moreInformationIcon__button moreInformationIcon__button btn"
-      :class="[active ? activeClass : '']"
-      @click="showWindow"
-    >
-      <img
-        src="../assets/icon/moreInfoIcon.svg"
-        alt=""
-        class="moreInformationIcon__iconTaiaha"
-      />
-    </button> -->
     <router-link to="/Hangi">
       <button v-if="iconVisible" class="moreInformation__button btn">
         <img
@@ -40,9 +29,7 @@ export default {
   data() {
     return {
       visible: true,
-      // active: false,
       iconVisible: true,
-      // activeClass: "is-visible",
       video: require("@/assets/video/video-haka-rugby.mp4"),
       hakaTitle: "haka",
       hakaDescription:
@@ -61,7 +48,6 @@ export default {
   methods: {
     async isVisible() {
       let video = document.getElementById("video");
-      console.log(video);
       video.onended = () => {
         this.showButton();
       };
@@ -75,10 +61,6 @@ export default {
     iconUndisplay() {
       this.iconVisible = true;
     },
-    // showWindow() {
-    //   this.moreInformationsIsShown = true;
-    // }
-
     vidIsVisible() {
       this.visible = !this.visible;
     }

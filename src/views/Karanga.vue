@@ -92,7 +92,6 @@ export default {
   methods: {
     async isVisible() {
       let video = document.getElementById("video");
-      console.log(video);
       video.onended = () => {
         this.showButton();
       };
