@@ -106,10 +106,5 @@ export default {
       padding-left: 190px;
     }
   }
-  // &__nextIcon {
-  //   position: absolute;
-  //   z-index: 1;
-  //   bottom: 8px;
-  // }
 }
 </style>

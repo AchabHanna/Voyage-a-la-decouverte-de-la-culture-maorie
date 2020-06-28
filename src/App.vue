@@ -30,7 +30,7 @@ p {
 }
 
 .slide-left-enter {
-  transform: translateX(150px);
+  transform: translateX(50vw);
   opacity: 0;
 }
 .slide-left-enter-active,
@@ -39,7 +39,7 @@ p {
 }
 
 .slide-left-leave-to {
-  transform: translateX(150px);
+  transform: translateX(50vw);
   opacity: 0;
 }
 
@@ -48,7 +48,7 @@ p {
 }
 .opacity-enter-active,
 .opacity-leave-active {
-  transition: opacity 0.4s linear;
+  transition: opacity 0.4s ease-out;
 }
 
 .opacity-leave-to {

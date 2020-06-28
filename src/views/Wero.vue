@@ -2,32 +2,6 @@
   <div class="moreInformation">
     <Muted />
     <ArticleVideo :video="video" />
-    <ArticleImg
-      :title="article.title"
-      :description="article.description"
-    ></ArticleImg>
-    <button
-      class="moreInformationIcon__button moreInformationIcon__button--taiaha"
-      :class="[active ? activeClass : '']"
-    >
-      >
-      <img
-        src="../assets/icon/moreInfoIcon.svg"
-        alt=""
-        class="moreInformationIcon__iconTaiaha"
-      />
-    </button>
-    <button
-      class="moreInformationIcon__button moreInformationIcon__button--puipui"
-      :class="[active ? activeClass : '']"
-    >
-      <img
-        src="../assets/icon/moreInfoIcon.svg"
-        alt=""
-        class="moreInformationIcon__iconPuipui"
-      />
-    </button>
-
     <transition name="opacity">
       <ArticleImg
         @is-visible="vidIsVisible"
@@ -36,7 +10,6 @@
         :description="descriptionWero"
       ></ArticleImg>
     </transition>
-    <Muted />
     <button
       class="moreInformationIcon__button moreInformationIcon__button--taiaha btn"
       :class="[active ? activeClass : '']"
@@ -106,7 +79,7 @@ export default {
       moreInformationsIsShown: false,
       active: false,
       iconVisible: true,
-      activeClass: "is-visible",
+      activeClass: "is-visibleClass",
       titleWero: "Wero",
       descriptionWero:
         "Lors de l'accueil des manuhiri (visiteurs) un des guerriers de la tribu s'avance pour effectuer une danse le Wero.Cette danse permet au guerrier de confirmer les intentions des manhuri (visiteurs) et de les dissuader de les attaquer. Il dépose ensuite un rautapu (feuille) que le manuhiri (visiteur) ramasse en signe de paix.",
@@ -123,7 +96,7 @@ export default {
       descriptionThirdMoreInformations:
         "Hineteiwaiwa est la principale déesse de la maison du tissage whare pora, elle représente les arts pratiqués par les femmes.Pour les maoris le tissage est un état d’être.",
       descriptionFourthMoreInformations:
-        "Hineteiwaiwa est la principale déesse de la maison du tissage whare pora, elle représente les arts pratiqués par les femmes.Pour les maoris le tissage est un état d’être.",
+        "Les tisserands initiés dans ces maisons à travers des céremonies et des incantations Karakia étaient portés dans un état de transe qui leur permettait d’élever leur niveau de conscience et d’etre prêt à recevoir les connaissances.",
       video: require("@/assets/video/video-wero.mp4"),
       taiahaTitle: "taiaha",
       taiahaDescription:
@@ -136,10 +109,6 @@ export default {
     contentServices.getArticle(1).then(response => {
       this.article = response.data;
       console.log(this.article);
-      // async mounted() {
-      //   contentServices.getArticle(26).then(response => {
-      //     this.article = response.data.article.contents;
-      //     console.log(this.article.contents);
     });
 
     await this.isVisible();
@@ -170,9 +139,6 @@ export default {
     },
     vidIsVisible() {
       this.visible = !this.visible;
-    },
-    showButton() {
-      this.active = !this.active;
     }
   }
 };
@@ -206,15 +172,15 @@ export default {
     transform: scale(1.1);
   }
 }
-.opacity-enter {
-  opacity: 0;
-}
-.opacity-enter-active,
-.opacity-leave-active {
-  transition: opacity 0.6s ease-out;
-}
+// .opacity-enter {
+//   opacity: 0;
+// }
+// .opacity-enter-active,
+// .opacity-leave-active {
+//   transition: opacity 0.6s ease-out;
+// }
 
-.opacity-leave-to {
-  opacity: 0;
-}
+// .opacity-leave-to {
+//   opacity: 0;
+// }
 </style>

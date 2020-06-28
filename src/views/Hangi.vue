@@ -11,7 +11,7 @@
     </transition>
     <TimeLine />
     <Muted />
-    <router-link to="/ned">
+    <router-link to="/wero">
       <button v-if="iconVisible" class="moreInformation__button btn">
         <img
           class="moreInformation__img"

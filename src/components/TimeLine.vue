@@ -237,8 +237,9 @@
         </div>
       </div>
     </div>
-
-    <div :class="[filter ? filtered : displayed]"></div>
+    <transition name="opacity">
+      <div :class="[filter ? filtered : '']"></div>
+    </transition>
   </div>
 </template>
 
@@ -248,8 +249,7 @@ export default {
     return {
       hover: false,
       filter: false,
-      filtered: "timeLine__filter",
-      displayed: "display"
+      filtered: "timeLine__filter"
     };
   },
   methods: {
@@ -384,12 +384,9 @@ export default {
     border: none;
     cursor: pointer;
     transition: 0.6s;
-<<<<<<< Updated upstream
-=======
     &:hover {
       transform: scale(1.3);
     }
->>>>>>> Stashed changes
 
     &--wero {
       background-color: #9f1f21;
@@ -429,24 +426,19 @@ export default {
     z-index: -1;
     opacity: 1;
     transition: opacity 0.6s;
-<<<<<<< Updated upstream
     position: absolute;
     top: 0;
-=======
->>>>>>> Stashed changes
   }
-  .display {
-    background-color: $filterColorTimeline;
-    width: 100vw;
-    height: 100vh;
-    opacity: 0;
-    transition: opacity 0.6s;
-<<<<<<< Updated upstream
-    position: absolute;
-    top: 0;
-    pointer-events: none;
-=======
->>>>>>> Stashed changes
-  }
+}
+.opacity-enter {
+  opacity: 0;
+}
+.opacity-enter-active,
+.opacity-leave-active {
+  transition: opacity 0.4s ease-out;
+}
+
+.opacity-leave-to {
+  opacity: 0;
 }
 </style>

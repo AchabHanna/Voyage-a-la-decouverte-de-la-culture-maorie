@@ -3,7 +3,7 @@
     <button
       class="mutedContainer__muteButton mutedContainer__muteButton--mute btn"
       id="unmuteIcon"
-      v-on:click="mute"
+      @click="mute"
       :class="[isVisible ? visible : display]"
     >
       <svg
@@ -28,7 +28,7 @@
     <button
       class="mutedContainer__muteButton mutedContainer__muteButton--unmute btn"
       id="muteIcon"
-      v-on:click="unmute"
+      @click="unmute"
       :class="[isVisible ? display : visible]"
     >
       <svg
@@ -80,9 +80,6 @@ export default {
   cursor: pointer;
 
   &__muteButton {
-<<<<<<< Updated upstream
-    transition: 0.6s;
-=======
     cursor: pointer;
     background-color: transparent;
     border: none;
@@ -90,7 +87,6 @@ export default {
     &:hover {
       transform: scale(1.1);
     }
->>>>>>> Stashed changes
 
     &--unmute {
       display: none;

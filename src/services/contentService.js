@@ -10,15 +10,9 @@ const apiClient = axios.create({
 });
 
 export default {
-<<<<<<< Updated upstream
-  //   getArticles() {
-  //     return apiClient.get("/articles");
-  //   },
-=======
   getArticles() {
     return apiClient.get("/articles");
   },
->>>>>>> Stashed changes
   getArticle(id) {
     return apiClient.get("/article/" + id);
   }
