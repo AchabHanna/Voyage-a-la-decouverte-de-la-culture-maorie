@@ -1,15 +1,23 @@
-Webdoc: Voyage à travers la culture Maori
 
-Team:
-Eunji Lee
-Cristiana Monteiro
-Ramtin Attar
-Hanna Achab
-Oum Mauduit
+# Voyage à la découverte de la culture maorie
 
-Command:
-npm install / yarn install
-npm run serve / yarn serve
-npm run build / yarn build
+ ___"Création d'une plateforme de streaming"___
 
-npm install axios
+## Membres :
+  [Oum MAUDUIT](https://github.com/Mauduit-O)
+  
+  [Hanna ACHAB](https://github.com/AchabHanna)
+  
+## Caractéristiques :
+
+- Thème : Webdoc interractif
+  
+- Support : 
+  - Desktop
+
+- Temps imparti : 
+  - 4 jours de conception
+  - 15 minutes de soutenance orale
+
+
+## Page web 
